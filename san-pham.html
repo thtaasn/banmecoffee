@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm | Ban Mê Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sanpham.css" />
+  </head>
+
+  <body>
+    <header class="bm-header">
+      <div class="bm-container bm-header-inner">
+        <a href="index.html" class="bm-logo">
+          <img src="image/logo.png" alt="Ban Mê Coffee" />
+        </a>
+
+        <nav class="bm-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="gioi-thieu.html">Giới thiệu</a>
+          <a href="san-pham.html" class="active">Sản phẩm</a>
+          <a href="ca-phe-ban-me.html">Cà phê Ban Mê</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="bm-header-icons">
+          <a href="#" aria-label="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="gio-hang.html" class="bm-cart-icon" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="bmCartCount">0</span>
+          </a>
+
+          <a href="tai-khoan.html" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+
+        <button
+          class="bm-mobile-toggle"
+          id="bmMobileToggle"
+          aria-label="Mở menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="sp-hero">
+        <div class="bm-container sp-hero-inner">
+          <span class="sp-kicker">Danh mục sản phẩm</span>
+          <h1>Các dòng sản phẩm cà phê Ban Mê Coffee</h1>
+          <p>Danh sách 10 sản phẩm của Ban Mê Coffee</p>
+        </div>
+      </section>
+
+      <section class="sp-catalog">
+        <div class="bm-container">
+          <div class="bm-section-title">
+            <h2>10 sản phẩm nổi bật</h2>
+            <span><i class="fa-solid fa-mug-hot"></i></span>
+          </div>
+
+          <div class="sp-grid">
+            <article class="sp-card" id="sp-robusta-500g">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=robusta-500g"
+              >
+                <img src="image/sanpham1.png" alt="Cà phê Robusta 500G" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng rang đậm</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=robusta-500g">
+                    Cà phê Robusta 500G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>145.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=robusta-500g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="robusta-500g"
+                      data-product-name="Cà phê Robusta 500G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card" id="sp-robusta-250g">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=robusta-250g"
+              >
+                <img src="image/sanpham2.png" alt="Cà phê Robusta 250G" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng rang đậm</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=robusta-250g">
+                    Cà phê Robusta 250G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>85.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=robusta-250g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="robusta-250g"
+                      data-product-name="Cà phê Robusta 250G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card" id="sp-arabica-500g">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=arabica-500g"
+              >
+                <img src="image/sanpham3.png" alt="Cà phê Arabica 500G" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng hương thơm</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=arabica-500g">
+                    Cà phê Arabica 500G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>165.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=arabica-500g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="arabica-500g"
+                      data-product-name="Cà phê Arabica 500G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card" id="sp-rang-xay-500g">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=rang-xay-500g"
+              >
+                <img src="image/sanpham4.png" alt="Cà phê Rang Xay 500G" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng tiện lợi</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=rang-xay-500g">
+                    Cà phê Rang Xay 500G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>150.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=rang-xay-500g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="rang-xay-500g"
+                      data-product-name="Cà phê Rang Xay 500G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=phin-blend-500g"
+              >
+                <img src="image/sanpham1.png" alt="Cà phê Phin Blend 500G" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng pha phin</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=phin-blend-500g">
+                    Cà phê Phin Blend 500G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>155.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=phin-blend-500g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="phin-blend-500g"
+                      data-product-name="Cà phê Phin Blend 500G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=espresso-blend-500g"
+              >
+                <img
+                  src="image/sanpham2.png"
+                  alt="Cà phê Espresso Blend 500G"
+                />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng espresso</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=espresso-blend-500g">
+                    Cà phê Espresso Blend 500G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>175.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=espresso-blend-500g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="espresso-blend-500g"
+                      data-product-name="Cà phê Espresso Blend 500G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=moka-250g"
+              >
+                <img src="image/sanpham3.png" alt="Cà phê Moka 250G" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng hương nổi bật</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=moka-250g">
+                    Cà phê Moka 250G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>120.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=moka-250g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="moka-250g"
+                      data-product-name="Cà phê Moka 250G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=cold-brew-blend-500g"
+              >
+                <img src="image/sanpham4.png" alt="Cold Brew Blend 500G" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng pha lạnh</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=cold-brew-blend-500g">
+                    Cold Brew Blend 500G
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>168.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=cold-brew-blend-500g"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="cold-brew-blend-500g"
+                      data-product-name="Cold Brew Blend 500G"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=hat-moc-1kg"
+              >
+                <img src="image/sanpham1.png" alt="Cà phê Hạt Mộc 1KG" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng tiết kiệm</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=hat-moc-1kg">
+                    Cà phê Hạt Mộc 1KG
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>279.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=hat-moc-1kg"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="hat-moc-1kg"
+                      data-product-name="Cà phê Hạt Mộc 1KG"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="sp-card">
+              <a
+                class="sp-card-image"
+                href="chi-tiet-san-pham.html?id=tui-loc-10-goi"
+              >
+                <img src="image/sanpham2.png" alt="Cà phê Túi Lọc 10 Gói" />
+              </a>
+              <div class="sp-card-body">
+                <p class="sp-type">Dòng tiện dụng</p>
+                <h3>
+                  <a href="chi-tiet-san-pham.html?id=tui-loc-10-goi">
+                    Cà phê Túi Lọc 10 Gói
+                  </a>
+                </h3>
+                <div class="sp-card-bottom">
+                  <strong>98.000đ</strong>
+                  <div class="sp-card-actions">
+                    <a
+                      class="sp-detail-link"
+                      href="chi-tiet-san-pham.html?id=tui-loc-10-goi"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      Xem
+                    </a>
+                    <button
+                      type="button"
+                      class="sp-buy-btn"
+                      data-product-id="tui-loc-10-goi"
+                      data-product-name="Cà phê Túi Lọc 10 Gói"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                      Thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bm-footer">
+      <div class="bm-container bm-footer-grid">
+        <div class="bm-footer-col bm-footer-brand">
+          <a href="index.html" class="bm-footer-logo">
+            <img src="image/logo-footer.png" alt="Ban Mê Coffee" />
+          </a>
+
+          <p>
+            Ban Mê Coffee tự hào mang đến những hạt cà phê chất lượng nhất từ
+            Buôn Ma Thuột - thủ phủ cà phê của Việt Nam.
+          </p>
+
+          <div class="bm-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="#">Câu chuyện thương hiệu</a></li>
+            <li><a href="#">Nông trại của chúng tôi</a></li>
+            <li><a href="#">Chất lượng cà phê</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Thanh toán</a></li>
+            <li><a href="#">Giao hàng & Vận chuyển</a></li>
+            <li><a href="#">Đổi trả & Hoàn tiền</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Thông tin liên hệ</h3>
+
+          <ul class="bm-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:0915638469">0915 638 469</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:banmecoffee@gmail.com">banmecoffee@gmail.com</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="https://banmecoffee.vn">www.banmecoffee.vn</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Đăng ký nhận tin</h3>
+
+          <p>Nhận ngay ưu đãi và thông tin mới nhất từ Ban Mê Coffee.</p>
+
+          <form class="bm-newsletter">
+            <input type="email" placeholder="Nhập email của bạn" />
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bm-copyright">© 2026 Ban Mê Coffee.</div>
+      <div class="bm-student-credit">
+        <p class="bm-student-credit-title">Thiết kế Website</p>
+        <p>Phạm Thị Lan Oanh · Nguyễn Thị Khánh Ly · Cao Quang Hải</p>
+        <p>Lớp: 24DTMDT1A</p>
+        <p>MÔN: Thiết kế Website</p>
+      </div>
+    </footer>
+
+    <button class="bm-back-to-top" id="bmBackToTop" aria-label="Lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      const bmCartStorageKey = "bm-cart-items";
+
+      function getCartItems() {
+        try {
+          const raw = localStorage.getItem(bmCartStorageKey);
+          const parsed = raw ? JSON.parse(raw) : [];
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function setCartItems(items) {
+        localStorage.setItem(bmCartStorageKey, JSON.stringify(items));
+      }
+
+      function updateCartCount() {
+        const cartCount = document.getElementById("bmCartCount");
+
+        if (!cartCount) {
+          return;
+        }
+
+        const total = getCartItems().reduce(function (sum, item) {
+          return sum + (item.quantity || 0);
+        }, 0);
+
+        cartCount.textContent = total;
+      }
+
+      function addToCart(productId, productName) {
+        const items = getCartItems();
+        const existingItem = items.find(function (item) {
+          return item.id === productId;
+        });
+        //  --------> BẤM SẢN PHẨM TĂNG THÊM 2 -------------->
+        if (existingItem) {
+          existingItem.quantity += 1;
+          // existingItem.quantity += 2;
+        } else {
+          items.push({
+            id: productId,
+            name: productName,
+            quantity: 1,
+            //  quantity: 2,
+          });
+        }
+
+        setCartItems(items);
+        updateCartCount();
+      }
+
+      document.querySelectorAll(".sp-buy-btn").forEach(function (button) {
+        button.addEventListener("click", function () {
+          addToCart(button.dataset.productId, button.dataset.productName);
+          button.classList.add("is-added");
+          button.innerHTML = 'Đã thêm <i class="fa-solid fa-check"></i>';
+
+          setTimeout(function () {
+            button.classList.remove("is-added");
+            button.innerHTML = '<i class="fa-solid fa-cart-plus"></i> Thêm';
+          }, 1200);
+        });
+      });
+
+      updateCartCount();
+
+      const bmBackToTop = document.getElementById("bmBackToTop");
+
+      if (bmBackToTop) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 250) {
+            bmBackToTop.classList.add("show");
+          } else {
+            bmBackToTop.classList.remove("show");
+          }
+        });
+
+        bmBackToTop.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      const bmMobileToggle = document.getElementById("bmMobileToggle");
+      const bmHeader = document.querySelector(".bm-header");
+      const bmMenuLinks = document.querySelectorAll(".bm-menu a");
+
+      if (bmMobileToggle && bmHeader) {
+        bmMobileToggle.addEventListener("click", function () {
+          bmHeader.classList.toggle("is-open");
+
+          const icon = bmMobileToggle.querySelector("i");
+
+          if (bmHeader.classList.contains("is-open")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+          } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+        bmMenuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            bmHeader.classList.remove("is-open");
+
+            const icon = bmMobileToggle.querySelector("i");
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          });
+        });
+      }
+    </script>
+    <script src="js/site-search.js"></script>
+  </body>
+</html>

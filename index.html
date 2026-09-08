@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ban Mê Coffee</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ==================================================
+    HEADER: LOGO - MENU - ICON
+  ================================================== -->
+    <header class="bm-header">
+      <div class="bm-container bm-header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="bm-logo">
+          <!-- Nếu có logo ảnh thì dùng dòng dưới -->
+          <img src="image/logo.png" alt="Ban Mê Coffee" />
+
+          <!-- Logo dạng chữ dự phòng -->
+          <!-- <span class="bm-logo-main">BAN MÊ</span>
+          <span class="bm-logo-sub">COFFEE</span> -->
+        </a>
+
+        <!-- Menu -->
+        <nav class="bm-menu">
+          <a href="index.html" class="active">Trang chủ</a>
+          <a href="gioi-thieu.html">Giới thiệu</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="ca-phe-ban-me.html">Cà phê Ban Mê</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+          
+        </nav>
+
+        <!-- Icon bên phải -->
+        <div class="bm-header-icons">
+          <a href="#" aria-label="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="gio-hang.html" class="bm-cart-icon" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="bmCartCount">0</span>
+          </a>
+
+          <a href="tai-khoan.html" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+
+        <!-- Nút menu mobile -->
+        <button
+          class="bm-mobile-toggle"
+          id="bmMobileToggle"
+          aria-label="Mở menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================================================
+    BANNER: DÙNG ẢNH BANNER ĐÃ CÓ CHỮ
+    Chỉ code nút "Khám phá ngay" và gắn link
+  ================================================== -->
+    <section class="bm-hero">
+      <img src="image/banner.png" alt="Cà phê Ban Mê" class="bm-hero-img" />
+
+      <div class="bm-container bm-hero-content">
+        <a href="san-pham.html" class="bm-hero-btn">
+          Khám phá ngay
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================================================
+    4 CỘT CAM KẾT / ƯU ĐIỂM
+  ================================================== -->
+    <section class="bm-features">
+      <div class="bm-container bm-features-grid">
+        <div class="bm-feature-item">
+          <div class="bm-feature-icon">
+            <img src="image/tieuchi1.png" alt="100% Nguyên Chất" />
+          </div>
+          <div class="bm-feature-text">
+            <h3>100% Nguyên Chất</h3>
+            <p>Cà phê sạch, không pha trộn, không tẩm ướp.</p>
+          </div>
+        </div>
+
+        <div class="bm-feature-item">
+          <div class="bm-feature-icon">
+            <img src="image/tieuchi2.png" alt="Hương Vị Đặc Trưng" />
+          </div>
+          <div class="bm-feature-text">
+            <h3>Hương Vị Đặc Trưng</h3>
+            <p>Đậm đà, hậu vị sâu lắng, đúng chất Ban Mê.</p>
+          </div>
+        </div>
+
+        <div class="bm-feature-item">
+          <div class="bm-feature-icon">
+            <img src="image/tieuchi3.png" alt="Nguồn Gốc Rõ Ràng" />
+          </div>
+          <div class="bm-feature-text">
+            <h3>Nguồn Gốc Rõ Ràng</h3>
+            <p>Thu hoạch từ nông trại tại Buôn Ma Thuột.</p>
+          </div>
+        </div>
+
+        <div class="bm-feature-item">
+          <div class="bm-feature-icon">
+            <img src="image/tieuchi4.png" alt="Giao Hàng Toàn Quốc" />
+          </div>
+          <div class="bm-feature-text">
+            <h3>Giao Hàng Toàn Quốc</h3>
+            <p>Giao hàng nhanh chóng, đóng gói cẩn thận.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+    <!!---------SẢN PHẨM NỔI BẬT------------------
+  ================================================== -->
+    <section class="bm-products">
+      <div class="bm-container">
+        <!-- Tiêu đề section -->
+        <div class="bm-section-title">
+          <h2>Sản phẩm nổi bật</h2>
+          <span>
+            <i class="fa-solid fa-mug-hot"></i>
+          </span>
+        </div>
+
+        <!-- Danh sách 4 sản phẩm -->
+        <div class="bm-product-grid">
+          <div class="bm-product-card">
+            <div class="bm-product-img">
+              <img src="image/sanpham1.png" alt="Cà phê Robusta 500G" />
+            </div>
+
+            <h3>Cà Phê Robusta</h3>
+            <p>500G</p>
+
+            <div class="bm-product-price">145.000đ</div>
+
+            <a href="chi-tiet-san-pham.html?id=robusta-500g" class="bm-buy-btn">
+              Mua ngay
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+
+          <div class="bm-product-card">
+            <div class="bm-product-img">
+              <img src="image/sanpham2.png" alt="Cà phê Robusta 250G" />
+            </div>
+
+            <h3>Cà Phê Robusta</h3>
+            <p>250G</p>
+
+            <div class="bm-product-price">85.000đ</div>
+
+            <a href="chi-tiet-san-pham.html?id=robusta-250g" class="bm-buy-btn">
+              Mua ngay
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+
+          <div class="bm-product-card">
+            <div class="bm-product-img">
+              <img src="image/sanpham3.png" alt="Cà phê Arabica 500G" />
+            </div>
+
+            <h3>Cà Phê Arabica</h3>
+            <p>500G</p>
+
+            <div class="bm-product-price">165.000đ</div>
+
+            <a href="chi-tiet-san-pham.html?id=arabica-500g" class="bm-buy-btn">
+              Mua ngay
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+
+          <div class="bm-product-card">
+            <div class="bm-product-img">
+              <img src="image/sanpham4.png" alt="Cà phê Rang Xay 500G" />
+            </div>
+
+            <h3>Cà Phê Rang Xay</h3>
+            <p>500G</p>
+
+            <div class="bm-product-price">150.000đ</div>
+
+            <a
+              href="chi-tiet-san-pham.html?id=rang-xay-500g"
+              class="bm-buy-btn"
+            >
+              Mua ngay
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nút xem tất cả -->
+        <div class="bm-view-all">
+          <a href="san-pham.html">
+            Xem tất cả sản phẩm
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+  CTA NGANG TRƯỚC FOOTER
+================================================== -->
+    <section class="bm-cta">
+      <div class="bm-container">
+        <div class="bm-cta-inner">
+          <div class="bm-cta-content">
+            <div class="bm-cta-decor">
+              <span></span>
+            </div>
+
+            <h2>
+              <span>“Cà phê Ban Mê”</span>
+              Nâng tầm hương vị Việt
+            </h2>
+
+            <p>
+              Mang đến những hạt cà phê chất lượng nhất từ Buôn Ma Thuột – Thủ
+              phủ cà phê của Việt Nam.
+            </p>
+
+            <a href="gioi-thieu.html" class="bm-cta-btn">
+              Tìm hiểu thêm
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+  SECTION GIỚI THIỆU / CÂU CHUYỆN THƯƠNG HIỆU
+================================================== -->
+    <section class="bm-about">
+      <div class="bm-container">
+        <div class="bm-about-grid">
+          <!-- Ảnh bên trái -->
+          <div class="bm-about-image">
+            <img
+              src="image/gioithieu.png"
+              alt="Câu chuyện thương hiệu Ban Mê Coffee"
+            />
+          </div>
+
+          <!-- Nội dung bên phải -->
+          <div class="bm-about-content">
+            <span class="bm-about-subtitle">Về Ban Mê Coffee</span>
+
+            <h2>Câu Chuyện Thương Hiệu</h2>
+
+            <p class="bm-about-desc">
+              Ban Mê Coffee ra đời từ tình yêu dành cho hạt cà phê Tây Nguyên.
+              Chúng tôi chọn lọc những hạt cà phê chín mọng từ vùng đất bazan
+              màu mỡ, rang xay với công thức riêng để giữ trọn hương vị nguyên
+              bản.
+            </p>
+
+            <div class="bm-about-list">
+              <div class="bm-about-item">
+                <div class="bm-about-icon">
+                  <i class="fa-solid fa-mountain-sun"></i>
+                </div>
+
+                <div>
+                  <h3>Nguồn Gốc Tây Nguyên</h3>
+                  <p>
+                    100% hạt cà phê được thu hoạch tại Buôn Ma Thuột, Đắk Lắk.
+                  </p>
+                </div>
+              </div>
+
+              <div class="bm-about-item">
+                <div class="bm-about-icon">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+
+                <div>
+                  <h3>Rang Mộc Tự Nhiên</h3>
+                  <p>Rang chậm ở nhiệt độ chuẩn để giữ trọn hương và vị.</p>
+                </div>
+              </div>
+
+              <div class="bm-about-item">
+                <div class="bm-about-icon">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <div>
+                  <h3>Cam Kết Chất Lượng</h3>
+                  <p>Không phụ gia, không hương liệu, an toàn cho sức khỏe.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+  SECTION TIN TỨC / BÀI VIẾT
+================================================== -->
+    <section class="bm-news-section">
+      <div class="bm-container">
+        <!-- Tiêu đề -->
+        <div class="bm-news-heading">
+          <div></div>
+
+          <div class="bm-section-title bm-news-title">
+            <h2>Tin tức thương hiệu</h2>
+            <span>
+              <i class="fa-solid fa-mug-hot"></i>
+            </span>
+          </div>
+
+          <a href="tin-tuc.html" class="bm-news-view-all">
+            Xem tất cả
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Danh sách bài viết -->
+        <div class="bm-news-grid">
+          <!-- Bài viết 1 -->
+          <article class="bm-news-card">
+            <a
+              href="chi-tiet-tin-tuc.html?id=hanh-trinh-hat-ca-phe-tay-nguyen"
+              class="bm-news-img"
+            >
+              <img
+                src="image/tintuc1.png"
+                alt="Hành trình hạt cà phê Tây Nguyên"
+              />
+            </a>
+
+            <div class="bm-news-content">
+              <span>Kiến thức cà phê</span>
+
+              <h3>
+                <a
+                  href="chi-tiet-tin-tuc.html?id=hanh-trinh-hat-ca-phe-tay-nguyen"
+                >
+                  Hành trình hạt cà phê Tây Nguyên
+                </a>
+              </h3>
+
+              <p>Từ nương rẫy bazan màu mỡ đến ly cà phê thơm ngon.</p>
+
+              <a
+                href="chi-tiet-tin-tuc.html?id=hanh-trinh-hat-ca-phe-tay-nguyen"
+                class="bm-news-more"
+              >
+                Xem thêm
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Bài viết 2 -->
+          <article class="bm-news-card">
+            <a
+              href="chi-tiet-tin-tuc.html?id=bi-quyet-pha-phin-chuan-vi"
+              class="bm-news-img"
+            >
+              <img src="image/tintuc2.png" alt="Bí quyết pha phin chuẩn vị" />
+            </a>
+
+            <div class="bm-news-content">
+              <span>Bí quyết pha chế</span>
+
+              <h3>
+                <a href="chi-tiet-tin-tuc.html?id=bi-quyet-pha-phin-chuan-vi">
+                  Bí quyết pha phin chuẩn vị
+                </a>
+              </h3>
+
+              <p>Những mẹo nhỏ giúp bạn pha phin ngon hơn mỗi ngày.</p>
+
+              <a
+                href="chi-tiet-tin-tuc.html?id=bi-quyet-pha-phin-chuan-vi"
+                class="bm-news-more"
+              >
+                Xem thêm
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Bài viết 3 -->
+          <article class="bm-news-card">
+            <a
+              href="chi-tiet-tin-tuc.html?id=vi-sao-chon-ban-me-coffee"
+              class="bm-news-img"
+            >
+              <img src="image/tintuc3.png" alt="Vì sao chọn Ban Mê Coffee" />
+            </a>
+
+            <div class="bm-news-content">
+              <span>Câu chuyện thương hiệu</span>
+
+              <h3>
+                <a href="chi-tiet-tin-tuc.html?id=vi-sao-chon-ban-me-coffee">
+                  Vì sao chọn Ban Mê Coffee?
+                </a>
+              </h3>
+
+              <p>Chúng tôi không chỉ bán cà phê, chúng tôi chia sẻ đam mê.</p>
+
+              <a
+                href="chi-tiet-tin-tuc.html?id=vi-sao-chon-ban-me-coffee"
+                class="bm-news-more"
+              >
+                Xem thêm
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+    FOOTER
+  ================================================== -->
+    <footer class="bm-footer">
+      <div class="bm-container bm-footer-grid">
+        <!-- Cột 1 -->
+        <div class="bm-footer-col bm-footer-brand">
+          <a href="index.html" class="bm-footer-logo">
+            <img src="image/logo-footer.png" alt="Ban Mê Coffee" />
+          </a>
+
+          <p>
+            Ban Mê Coffee tự hào mang đến những hạt cà phê chất lượng nhất từ
+            Buôn Ma Thuột - thủ phủ cà phê của Việt Nam.
+          </p>
+
+          <div class="bm-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Cột 2 -->
+        <div class="bm-footer-col">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="#">Câu chuyện thương hiệu</a></li>
+            <li><a href="#">Nông trại của chúng tôi</a></li>
+            <li><a href="#">Chất lượng cà phê</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="bm-footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Thanh toán</a></li>
+            <li><a href="#">Giao hàng & Vận chuyển</a></li>
+            <li><a href="#">Đổi trả & Hoàn tiền</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+        <!-- Cột 4 -->
+
+        <div class="bm-footer-col">
+          <h3>Thông tin liên hệ</h3>
+
+          <ul class="bm-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:0915638469">0915 638 469</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:banmecoffee@gmail.com">banmecoffee@gmail.com</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="https://banmecoffee.vn">www.banmecoffee.vn</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 5 -->
+        <div class="bm-footer-col">
+          <h3>Đăng ký nhận tin</h3>
+
+          <p>Nhận ngay ưu đãi và thông tin mới nhất từ Ban Mê Coffee.</p>
+
+          <form class="bm-newsletter">
+            <input type="email" placeholder="Nhập email của bạn" />
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bm-copyright">© 2026 Ban Mê Coffee.</div>
+      <div class="bm-student-credit">
+        <p class="bm-student-credit-title">Thiết kế Website</p>
+        <p>Phạm Thị Lan Oanh · Nguyễn Thị Khánh Ly · Cao Quang Hải</p>
+        <p>Lớp: 24DTMDT1A</p>
+        <p>MÔN: Thiết kế Website</p>
+      </div>
+    </footer>
+    <!-- ==================================================
+  NÚT BACK TO TOP
+================================================== -->
+    <button class="bm-back-to-top" id="bmBackToTop" aria-label="Lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script>
+      const bmCartStorageKey = "bm-cart-items";
+
+      function getCartItems() {
+        try {
+          const raw = localStorage.getItem(bmCartStorageKey);
+          const parsed = raw ? JSON.parse(raw) : [];
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function updateCartCount() {
+        const cartCount = document.getElementById("bmCartCount");
+
+        if (!cartCount) {
+          return;
+        }
+
+        const total = getCartItems().reduce(function (sum, item) {
+          return sum + (item.quantity || 0);
+        }, 0);
+
+        cartCount.textContent = total;
+      }
+
+      updateCartCount();
+
+      const bmBackToTop = document.getElementById("bmBackToTop");
+
+      if (bmBackToTop) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 250) {
+            bmBackToTop.classList.add("show");
+          } else {
+            bmBackToTop.classList.remove("show");
+          }
+        });
+
+        bmBackToTop.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      const bmMobileToggle = document.getElementById("bmMobileToggle");
+      const bmHeader = document.querySelector(".bm-header");
+      const bmMenuLinks = document.querySelectorAll(".bm-menu a");
+
+      if (bmMobileToggle && bmHeader) {
+        bmMobileToggle.addEventListener("click", function () {
+          bmHeader.classList.toggle("is-open");
+
+          const icon = bmMobileToggle.querySelector("i");
+
+          if (bmHeader.classList.contains("is-open")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+          } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+        bmMenuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            bmHeader.classList.remove("is-open");
+
+            const icon = bmMobileToggle.querySelector("i");
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          });
+        });
+      }
+    </script>
+    <script src="js/site-search.js"></script>
+  </body>
+</html>

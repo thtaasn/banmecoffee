@@ -1,0 +1,62 @@
+caphe/
+│
+├── index.html
+├── ca-phe-ban-me.html
+├── chi-tiet-san-pham.html
+├── dat-hang.html
+├── dat-hang-thanh-cong.html
+├── gio-hang.html
+├── gioi-thieu.html
+├── lien-he.html
+├── san-pham.html
+├── tai-khoan.html
+├── tin-tuc.html
+├── tintuc.html
+│
+├── css/
+│   ├── style.css
+│   ├── caphebanme.css
+│   ├── chitietsanpham.css
+│   ├── chitiettintuc.css
+│   ├── dathang.css
+│   ├── dathangthanhcong.css
+│   ├── giohang.css
+│   ├── gioithieu.css
+│   ├── lienhe.css
+│   ├── sanpham.css
+│   ├── taikhoan.css
+│   └── tintuc.css
+│
+├── js/
+│   ├── site-search.js
+│   └── tai-khoan.js
+│
+└── image/
+    ├── banner.png
+    ├── banner 2.png
+    ├── banner 3.png
+    ├── banner 4.png
+    ├── banner 5.png
+    ├── banner 6.png
+    ├── banner 7.png
+    ├── gioithieu.png
+    ├── logo-footer.png
+    ├── logo.png
+    ├── logo1.png
+    ├── logo2.png
+    ├── logoo.png
+    ├── nen.png
+    ├── nen1.jpg
+    ├── sanpham1.png
+    ├── sanpham2.png
+    ├── sanpham3.png
+    ├── sanpham4.png
+    ├── tieuchi1.png
+    ├── tieuchi2.png
+    ├── tieuchi3.png
+    ├── tieuchi4.png
+    ├── tieuchi6.png
+    ├── tieuchi7.png
+    ├── tintuc1.png
+    ├── tintuc2.png
+    └── tintuc3.png

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tài khoản | Ban Mê Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/taikhoan.css" />
+
+    <script src="js/tai-khoan.js" defer></script>
+  </head>
+
+  <body>
+    <header class="bm-header">
+      <div class="bm-container bm-header-inner">
+        <a class="bm-logo" href="index.html">
+          <img src="image/logo.png" alt="Ban Mê Coffee" />
+        </a>
+
+        <nav class="bm-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="gioi-thieu.html">Giới thiệu</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="ca-phe-ban-me.html">Cà phê Ban Mê</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="bm-header-icons">
+          <a href="#" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a class="bm-cart-icon" href="gio-hang.html" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="bmCartCount">0</span>
+          </a>
+          <a href="tai-khoan.html" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <button class="bm-mobile-toggle" id="bmMobileToggle" aria-label="Mở menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="account-hero">
+        <h1>Tài khoản</h1>
+        <p>Đăng nhập để mua sắm cùng Ban Mê Coffee</p>
+      </section>
+
+      <section class="account-area">
+        <div class="account-box">
+            <div class="account-tabs" id="accountTabs">
+              <button class="active" type="button" data-mode="login">Đăng nhập</button>
+              <button type="button" data-mode="register">Đăng ký</button>
+            </div>
+
+            <div class="account-form" id="accountForm">
+              <h2 id="formTitle">Chào mừng khách hàng trở lại</h2>
+              <p id="formDescription">Đăng nhập để tiếp tục mua sắm.</p>
+
+              <form id="authForm" novalidate>
+                <div class="account-field" id="nameField" hidden>
+                  <label for="fullName">Họ và tên</label>
+                  <input id="fullName" type="text" autocomplete="name" placeholder="Nhập họ và tên" />
+                </div>
+
+                <div class="account-field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" autocomplete="email" placeholder="email@gmail.com" required />
+                </div>
+
+                <div class="account-field">
+                  <label for="password">Mật khẩu</label>
+                  <input id="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" required />
+                </div>
+
+                <div class="account-options" id="loginOptions">
+                  <label>
+                    <input id="showPassword" type="checkbox" /> Hiển thị mật khẩu
+                  </label>
+                  <a id="forgotPassword" href="#">Quên mật khẩu</a>
+                </div>
+
+                <button class="account-submit" id="submitButton" type="submit">Đăng nhập</button>
+                <p class="account-message" id="accountMessage" role="alert"></p>
+              </form>
+            </div>
+
+            <div class="account-dashboard" id="accountDashboard">
+              <i class="fa-solid fa-circle-check"></i>
+              <h2>Xin chào, <span id="customerName"></span>!</h2>
+              <p> Đăng nhập thành công vào tài khoản Ban Mê Coffee.</p>
+              <div class="account-actions">
+                <a href="san-pham.html">Tiếp tục mua sắm</a>
+                <button id="logoutButton" type="button">Đăng xuất</button>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+  </body>
+</html>

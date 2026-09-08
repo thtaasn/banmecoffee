@@ -1,0 +1,95 @@
+body {
+  background:
+    radial-gradient(circle at top left, rgba(217, 161, 93, 0.18), transparent 28%),
+    #f5ead8;
+}
+
+.cttt-main {
+  padding: 138px 0 78px;
+}
+
+.cttt-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: #6a4a32;
+  font-size: 14px;
+}
+
+.cttt-article {
+  background: #f0dec4;
+  border: 1px solid rgba(91, 59, 37, 0.08);
+  box-shadow: 0 16px 34px rgba(60, 35, 18, 0.08);
+  overflow: hidden;
+}
+
+.cttt-cover {
+  height: 420px;
+}
+
+.cttt-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cttt-content {
+  padding: 34px 30px 36px;
+}
+
+.cttt-category {
+  display: inline-block;
+  color: #b87935;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cttt-content h1 {
+  margin: 14px 0 14px;
+  color: #2f1d12;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.cttt-intro {
+  margin: 0 0 24px;
+  color: #5a4231;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.cttt-body p {
+  margin: 0 0 18px;
+  color: #5a4231;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+  .cttt-main {
+    padding-top: 118px;
+    padding-bottom: 54px;
+  }
+
+  .cttt-cover {
+    height: 260px;
+  }
+
+  .cttt-content {
+    padding: 24px 18px 28px;
+  }
+
+  .cttt-content h1 {
+    font-size: 30px;
+  }
+
+  .cttt-intro {
+    font-size: 16px;
+  }
+}

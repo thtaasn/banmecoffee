@@ -1,0 +1,243 @@
+/* BANNER TÀI KHOẢN */
+.account-hero {
+  min-height: 265px;
+  padding: 145px 0 54px;
+  color: #fff;
+  text-align: center;
+  background:
+    linear-gradient(105deg, rgba(37, 20, 10, 0.9), rgba(63, 34, 17, 0.72)),
+    url("../image/banner\ 2.png") center / cover;
+}
+
+.account-hero h1 {
+  margin: 0 0 9px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.account-hero p {
+  margin: 0;
+  color: #f5dfc0;
+}
+
+/* KHUNG ĐĂNG NHẬP */
+.account-area {
+  padding: 65px 0 78px;
+}
+
+.account-box {
+  width: min(500px, 100%);
+  margin: auto;
+  background: #fffaf2;
+  border: 1px solid rgba(99, 58, 28, 0.12);
+  box-shadow: 0 12px 36px rgba(66, 37, 16, 0.13);
+}
+
+.account-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f0ddc3;
+}
+
+.account-tabs button {
+  padding: 18px 10px;
+  border: 0;
+  color: #6b4229;
+  background: transparent;
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.account-tabs button.active {
+  color: #fff;
+  background: #6a351d;
+}
+
+/* FORM */
+.account-form {
+  padding: 32px 38px 38px;
+}
+
+.account-form h2 {
+  margin: 0 0 8px;
+  color: #402012;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.account-form > p {
+  margin: 0 0 26px;
+  color: #785d4a;
+  font-size: 14px;
+  text-align: center;
+}
+
+.account-field {
+  margin-bottom: 17px;
+}
+
+.account-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #4e2a17;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.account-field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #dac3a7;
+  outline: 0;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.account-field input:focus {
+  border-color: #a46236;
+  box-shadow: 0 0 0 3px rgba(164, 98, 54, 0.12);
+}
+
+.account-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2px 0 22px;
+  color: #66432c;
+  font-size: 13px;
+}
+
+.account-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.account-options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #a85c2f;
+  cursor: pointer;
+}
+
+.account-options a {
+  color: #955025;
+  font-weight: 700;
+}
+
+.account-submit {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  color: #fff;
+  background: #a85c2f;
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.account-submit:hover {
+  background: #7e3d20;
+}
+
+.account-message {
+  min-height: 20px;
+  margin: 15px 0 0;
+  color: #a02626;
+  font-size: 14px;
+  text-align: center;
+}
+
+.account-message.success {
+  color: #27733c;
+}
+
+/* TRẠNG THÁI ĐĂNG NHẬP */
+.account-dashboard {
+  display: none;
+  padding: 38px;
+  text-align: center;
+}
+
+.account-dashboard i {
+  color: #a85c2f;
+  font-size: 45px;
+}
+
+.account-dashboard h2 {
+  margin: 15px 0 8px;
+  color: #402012;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 29px;
+  font-weight: 800;
+}
+
+.account-dashboard p {
+  color: #6d5040;
+}
+
+.account-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.account-actions a,
+.account-actions button {
+  padding: 13px 18px;
+  border: 0;
+  color: #fff;
+  background: #a85c2f;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.account-actions button {
+  background: #6a351d;
+}
+
+/* GIAO DIỆN ĐIỆN THOẠI */
+@media (max-width: 600px) {
+  .account-hero h1 {
+    font-size: 33px;
+  }
+
+  .account-area {
+    padding: 38px 0;
+  }
+
+  .account-form,
+  .account-dashboard {
+    padding: 27px 21px;
+  }
+
+  .account-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .account-actions {
+    flex-direction: column;
+  }
+}

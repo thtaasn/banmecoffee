@@ -1,0 +1,243 @@
+.ctsp-main {
+  padding: 138px 0 46px;
+  background:
+    radial-gradient(circle at top left, rgba(214, 160, 95, 0.18), transparent 24%),
+    #f5ead8;
+}
+
+.ctsp-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: #6a4a32;
+  font-size: 14px;
+}
+
+.ctsp-breadcrumb a:hover {
+  color: #b87935;
+}
+
+.ctsp-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.ctsp-main-image {
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.8), transparent 52%),
+    linear-gradient(180deg, #f7efdf, #ebd4b2);
+  min-height: 520px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 36px rgba(60, 35, 18, 0.1);
+}
+
+.ctsp-main-image img {
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.ctsp-type {
+  margin: 0 0 10px;
+  color: #b87935;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.ctsp-content h1 {
+  margin: 0 0 12px;
+  color: #2f1d12;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.ctsp-price {
+  margin-bottom: 18px;
+  color: #b23a20;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.ctsp-summary {
+  margin: 0 0 24px;
+  color: #5a4231;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.ctsp-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.ctsp-meta div {
+  padding: 16px;
+  background: #ecd7bb;
+  border: 1px solid rgba(91, 59, 37, 0.1);
+}
+
+.ctsp-meta span {
+  display: block;
+  margin-bottom: 6px;
+  color: #7a583e;
+  font-size: 13px;
+}
+
+.ctsp-meta strong {
+  color: #2f1d12;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ctsp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.ctsp-quantity {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(91, 59, 37, 0.18);
+  background: #f7efdf;
+}
+
+.ctsp-quantity button,
+.ctsp-quantity input {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  color: #2f1d12;
+  font-size: 18px;
+}
+
+.ctsp-quantity button {
+  cursor: pointer;
+}
+
+.ctsp-quantity input {
+  width: 58px;
+  outline: 0;
+}
+
+.ctsp-buy-btn {
+  min-width: 220px;
+  height: 48px;
+  border: 1px solid #6a4a32;
+  background: #3c2618;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ctsp-buy-btn:hover {
+  background: #24160d;
+}
+
+.ctsp-buy-btn.is-added {
+  background: #2f6d3e;
+  border-color: #2f6d3e;
+}
+
+.ctsp-note {
+  margin-top: 18px;
+  color: #6a4a32;
+  font-size: 14px;
+}
+
+.ctsp-info {
+  padding: 0 0 72px;
+  background: #f5ead8;
+}
+
+.ctsp-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.ctsp-info-card {
+  padding: 30px 28px;
+  background: #f0dec4;
+  border: 1px solid rgba(91, 59, 37, 0.08);
+}
+
+.ctsp-info-card h2 {
+  margin: 0 0 14px;
+  color: #2f1d12;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.ctsp-info-card p,
+.ctsp-info-card li {
+  color: #5a4231;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.ctsp-info-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 1024px) {
+  .ctsp-layout,
+  .ctsp-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctsp-content h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctsp-main {
+    padding-top: 118px;
+  }
+
+  .ctsp-main-image {
+    min-height: 360px;
+  }
+
+  .ctsp-content h1 {
+    font-size: 30px;
+  }
+
+  .ctsp-price {
+    font-size: 32px;
+  }
+
+  .ctsp-meta {
+    grid-template-columns: 1fr;
+  }
+}
+

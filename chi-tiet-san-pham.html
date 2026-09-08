@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm | Ban Mê Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/chitietsanpham.css" />
+  </head>
+
+  <body>
+    <header class="bm-header">
+      <div class="bm-container bm-header-inner">
+        <a href="index.html" class="bm-logo">
+          <img src="image/logo.png" alt="Ban Mê Coffee" />
+        </a>
+
+        <nav class="bm-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="gioi-thieu.html">Giới thiệu</a>
+          <a href="san-pham.html" class="active">Sản phẩm</a>
+          <a href="ca-phe-ban-me.html">Cà phê Ban Mê</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="bm-header-icons">
+          <a href="#" aria-label="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="gio-hang.html" class="bm-cart-icon" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="bmCartCount">0</span>
+          </a>
+
+          <a href="tai-khoan.html" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+
+        <button
+          class="bm-mobile-toggle"
+          id="bmMobileToggle"
+          aria-label="Mở menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="ctsp-main">
+        <div class="bm-container">
+          <div class="ctsp-breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <span>/</span>
+            <a href="san-pham.html">Sản phẩm</a>
+            <span>/</span>
+            <strong id="ctspBreadcrumbName">Chi tiết sản phẩm</strong>
+          </div>
+
+          <div class="ctsp-layout">
+            <div class="ctsp-gallery">
+              <div class="ctsp-main-image">
+                <img id="ctspImage" src="image/sanpham1.png" alt="Sản phẩm" />
+              </div>
+            </div>
+
+            <div class="ctsp-content">
+              <p class="ctsp-type" id="ctspType">Dòng cà phê</p>
+              <h1 id="ctspName">Tên sản phẩm</h1>
+              <div class="ctsp-price" id="ctspPrice">0đ</div>
+
+              <p class="ctsp-summary" id="ctspSummary">
+                Thông tin sản phẩm đang được cập nhật.
+              </p>
+
+              <div class="ctsp-meta">
+                <div>
+                  <span>Khối lượng</span>
+                  <strong id="ctspWeight">500G</strong>
+                </div>
+                <div>
+                  <span>Phù hợp</span>
+                  <strong id="ctspBrew">Pha phin</strong>
+                </div>
+                <div>
+                  <span>Hương vị</span>
+                  <strong id="ctspTaste">Đậm vị</strong>
+                </div>
+              </div>
+
+              <div class="ctsp-actions">
+                <div class="ctsp-quantity">
+                  <button
+                    type="button"
+                    id="ctspMinus"
+                    aria-label="Giảm số lượng"
+                  >
+                    -
+                  </button>
+                  <input type="number" id="ctspQty" min="1" value="1" />
+                  <button
+                    type="button"
+                    id="ctspPlus"
+                    aria-label="Tăng số lượng"
+                  >
+                    +
+                  </button>
+                </div>
+
+                <button type="button" class="ctsp-buy-btn" id="ctspBuyBtn">
+                  Mua ngay
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+
+              <div class="ctsp-note">
+                Giao hàng toàn quốc. Hình ảnh hiện tại là ảnh tạm để bạn thay
+                thế sau.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ctsp-info">
+        <div class="bm-container">
+          <div class="ctsp-info-grid">
+            <article class="ctsp-info-card">
+              <h2>Mô tả sản phẩm</h2>
+              <p id="ctspDesc1">
+                Cà phê Ban Mê Coffee được chọn lọc để giữ vị nguyên bản và rõ
+                gu.
+              </p>
+              <p id="ctspDesc2">
+                Thành phẩm phù hợp cho người yêu vị cà phê mộc và hậu vị sạch.
+              </p>
+            </article>
+
+            <article class="ctsp-info-card">
+              <h2>Điểm nổi bật</h2>
+              <ul id="ctspHighlights">
+                <li>Nguyên liệu tuyển chọn</li>
+                <li>Rang mộc chỉn chu</li>
+                <li>Phù hợp dùng hằng ngày</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bm-footer">
+      <div class="bm-container bm-footer-grid">
+        <div class="bm-footer-col bm-footer-brand">
+          <a href="index.html" class="bm-footer-logo">
+            <img src="image/logo-footer.png" alt="Ban Mê Coffee" />
+          </a>
+
+          <p>
+            Ban Mê Coffee tự hào mang đến những hạt cà phê chất lượng nhất từ
+            Buôn Ma Thuột - thủ phủ cà phê của Việt Nam.
+          </p>
+
+          <div class="bm-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="#">Câu chuyện thương hiệu</a></li>
+            <li><a href="#">Nông trại của chúng tôi</a></li>
+            <li><a href="#">Chất lượng cà phê</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Thanh toán</a></li>
+            <li><a href="#">Giao hàng & Vận chuyển</a></li>
+            <li><a href="#">Đổi trả & Hoàn tiền</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Thông tin liên hệ</h3>
+
+          <ul class="bm-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:0915638469">0915 638 469</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:banmecoffee@gmail.com">banmecoffee@gmail.com</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="https://banmecoffee.vn">www.banmecoffee.vn</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Đăng ký nhận tin</h3>
+
+          <p>Nhận ngay ưu đãi và thông tin mới nhất từ Ban Mê Coffee.</p>
+
+          <form class="bm-newsletter">
+            <input type="email" placeholder="Nhập email của bạn" />
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bm-copyright">© 2026 Ban Mê Coffee.</div>
+      <div class="bm-student-credit">
+        <p class="bm-student-credit-title">Thiết kế Website</p>
+        <p>Phạm Thị Lan Oanh · Nguyễn Thị Khánh Ly · Cao Quang Hải</p>
+        <p>Lớp: 24DTMDT1A</p>
+        <p>MÔN: Thiết kế Website</p>
+      </div>
+    </footer>
+
+    <button class="bm-back-to-top" id="bmBackToTop" aria-label="Lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      const bmCartStorageKey = "bm-cart-items";
+      const productCatalog = {
+        "robusta-500g": {
+          id: "robusta-500g",
+          name: "Cà phê Robusta 500G",
+          type: "Dòng rang đậm",
+          price: "145.000đ",
+          image: "image/sanpham1.png",
+          weight: "500G",
+          brew: "Pha phin",
+          taste: "Đậm, mạnh",
+          summary:
+            "Robusta 500G dành cho người thích ly cà phê đậm vị, dày thân và rõ hậu.",
+          desc1:
+            "Sản phẩm phù hợp cho gu uống truyền thống, nhất là khi cần độ đậm rõ và cảm giác tỉnh vị sau mỗi ngụm.",
+          desc2:
+            "Dòng này phát huy tốt khi pha phin hoặc pha máy theo kiểu đậm, ít chua và thiên về cảm giác mạnh.",
+          highlights: [
+            "Vị đậm và hậu kéo dài",
+            "Phù hợp pha phin truyền thống",
+            "Thích hợp dùng buổi sáng",
+          ],
+        },
+        "robusta-250g": {
+          id: "robusta-250g",
+          name: "Cà phê Robusta 250G",
+          type: "Dòng rang đậm",
+          price: "85.000đ",
+          image: "image/sanpham2.png",
+          weight: "250G",
+          brew: "Pha phin",
+          taste: "Đậm, gọn vị",
+          summary:
+            "Phiên bản gói nhỏ giúp trải nghiệm dễ hơn nhưng vẫn giữ rõ chất Robusta Ban Mê.",
+          desc1:
+            "Khối lượng 250G phù hợp cho người muốn thử gu vị trước khi chọn gói lớn hơn.",
+          desc2:
+            "Sản phẩm hướng đến sự tiện lợi, dễ bảo quản và dùng hết nhanh trong thời gian ngắn.",
+          highlights: [
+            "Gói nhỏ dễ dùng",
+            "Giữ độ đậm ổn định",
+            "Phù hợp trải nghiệm thử",
+          ],
+        },
+        "arabica-500g": {
+          id: "arabica-500g",
+          name: "Cà phê Arabica 500G",
+          type: "Dòng hương thơm",
+          price: "165.000đ",
+          image: "image/sanpham3.png",
+          weight: "500G",
+          brew: "Pour over / phin",
+          taste: "Thơm, cân bằng",
+          summary:
+            "Arabica 500G phù hợp với người thích mùi hương rõ và cảm giác uống cân bằng hơn.",
+          desc1:
+            "Dòng Arabica thiên về hương thơm, độ sáng vị tốt hơn và hậu nhẹ nhàng hơn so với Robusta.",
+          desc2:
+            "Có thể dùng để pha phin nhẹ hoặc các kiểu pha ưu tiên mùi hương như pour over.",
+          highlights: [
+            "Hương thơm nổi bật",
+            "Độ cân bằng dễ uống",
+            "Hợp gu uống thanh hơn",
+          ],
+        },
+        "rang-xay-500g": {
+          id: "rang-xay-500g",
+          name: "Cà phê Rang Xay 500G",
+          type: "Dòng tiện lợi",
+          price: "150.000đ",
+          image: "image/sanpham4.png",
+          weight: "500G",
+          brew: "Pha phin",
+          taste: "Đậm, tiện dùng",
+          summary:
+            "Dòng rang xay sẵn giúp tiết kiệm thời gian mà vẫn giữ gu vị quen thuộc.",
+          desc1:
+            "Phù hợp cho người dùng tại nhà hoặc văn phòng muốn pha nhanh mà không cần xay lại.",
+          desc2:
+            "Độ xay được định hướng cho nhu cầu pha phin phổ biến, giúp thao tác đơn giản hơn.",
+          highlights: [
+            "Xay sẵn tiện lợi",
+            "Phù hợp nhu cầu hằng ngày",
+            "Dễ dùng tại nhà",
+          ],
+        },
+        "phin-blend-500g": {
+          id: "phin-blend-500g",
+          name: "Cà phê Phin Blend 500G",
+          type: "Dòng pha phin",
+          price: "155.000đ",
+          image: "image/sanpham1.png",
+          weight: "500G",
+          brew: "Pha phin",
+          taste: "Cân bằng, đậm vừa",
+          summary:
+            "Blend dành cho người cần ly cà phê cân bằng giữa hương thơm và độ đậm hằng ngày.",
+          desc1:
+            "Công thức blend giúp vị cà phê tròn hơn, dễ tiếp cận và hợp nhiều kiểu uống.",
+          desc2:
+            "Đây là dòng phù hợp nếu bạn muốn một lựa chọn an toàn nhưng vẫn giữ chất Ban Mê.",
+          highlights: [
+            "Cân bằng dễ uống",
+            "Hợp pha phin mỗi ngày",
+            "Gu vị ổn định",
+          ],
+        },
+        "espresso-blend-500g": {
+          id: "espresso-blend-500g",
+          name: "Cà phê Espresso Blend 500G",
+          type: "Dòng espresso",
+          price: "175.000đ",
+          image: "image/sanpham2.png",
+          weight: "500G",
+          brew: "Máy espresso",
+          taste: "Dày thân, rõ crema",
+          summary:
+            "Dòng blend tối ưu cho máy pha, nhấn vào độ dày thân và cảm giác mạnh vị.",
+          desc1:
+            "Phù hợp cho người dùng máy pha gia đình hoặc quán nhỏ muốn shot espresso rõ vị.",
+          desc2:
+            "Có thể dùng làm nền cho latte, cappuccino hoặc các món sữa cần vị cà phê nổi bật.",
+          highlights: [
+            "Hợp máy espresso",
+            "Vị dày, rõ crema",
+            "Pha sữa vẫn giữ vị",
+          ],
+        },
+        "moka-250g": {
+          id: "moka-250g",
+          name: "Cà phê Moka 250G",
+          type: "Dòng hương nổi bật",
+          price: "120.000đ",
+          image: "image/sanpham3.png",
+          weight: "250G",
+          brew: "Pour over / phin nhẹ",
+          taste: "Thơm, mềm vị",
+          summary:
+            "Moka 250G dành cho người muốn trải nghiệm dòng hương rõ và cảm giác mềm vị hơn.",
+          desc1:
+            "Sản phẩm phù hợp làm quà hoặc dùng thử cho người mới bắt đầu khám phá các gu cà phê thơm.",
+          desc2:
+            "Khối lượng 250G cũng giúp bạn thay đổi gu uống linh hoạt mà không cần mua gói quá lớn.",
+          highlights: [
+            "Hương thơm đặc trưng",
+            "Phù hợp dùng thử",
+            "Cảm giác uống mềm hơn",
+          ],
+        },
+        "cold-brew-blend-500g": {
+          id: "cold-brew-blend-500g",
+          name: "Cold Brew Blend 500G",
+          type: "Dòng pha lạnh",
+          price: "168.000đ",
+          image: "image/sanpham4.png",
+          weight: "500G",
+          brew: "Cold brew",
+          taste: "Êm, sạch vị",
+          summary:
+            "Blend này hướng tới cảm giác êm và sạch khi pha lạnh hoặc ủ qua đêm.",
+          desc1:
+            "Phù hợp cho người cần thức uống mát, ít gắt và có thể dùng trực tiếp với đá.",
+          desc2:
+            "Dòng cold brew giúp mùi hương dễ chịu hơn và phù hợp khí hậu nóng.",
+          highlights: ["Hợp pha lạnh", "Vị êm, sạch", "Dễ uống hằng ngày"],
+        },
+        "hat-moc-1kg": {
+          id: "hat-moc-1kg",
+          name: "Cà phê Hạt Mộc 1KG",
+          type: "Dòng tiết kiệm",
+          price: "279.000đ",
+          image: "image/sanpham1.png",
+          weight: "1KG",
+          brew: "Tùy cách pha",
+          taste: "Mộc, ổn định",
+          summary:
+            "Gói 1KG phù hợp cho nhu cầu sử dụng nhiều với mức chi phí tối ưu hơn.",
+          desc1:
+            "Sản phẩm phù hợp cho gia đình, văn phòng hoặc khách có nhu cầu mua số lượng lớn.",
+          desc2:
+            "Dạng hạt giúp chủ động độ xay theo thiết bị và kiểu pha của từng người dùng.",
+          highlights: [
+            "Khối lượng lớn",
+            "Dễ tối ưu chi phí",
+            "Linh hoạt khi sử dụng",
+          ],
+        },
+        "tui-loc-10-goi": {
+          id: "tui-loc-10-goi",
+          name: "Cà phê Túi Lọc 10 Gói",
+          type: "Dòng tiện dụng",
+          price: "98.000đ",
+          image: "image/sanpham2.png",
+          weight: "10 gói",
+          brew: "Pha trực tiếp",
+          taste: "Nhanh, gọn, dễ uống",
+          summary:
+            "Giải pháp pha nhanh cho người cần sự tiện lợi khi đi làm hoặc di chuyển.",
+          desc1:
+            "Thiết kế túi lọc giúp thao tác gọn, không cần chuẩn bị nhiều dụng cụ pha.",
+          desc2:
+            "Phù hợp cho người bận rộn nhưng vẫn muốn có một ly cà phê chỉn chu.",
+          highlights: ["Tiện mang theo", "Pha nhanh, gọn", "Hợp dân văn phòng"],
+        },
+      };
+
+      function getCartItems() {
+        try {
+          const raw = localStorage.getItem(bmCartStorageKey);
+          const parsed = raw ? JSON.parse(raw) : [];
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function setCartItems(items) {
+        localStorage.setItem(bmCartStorageKey, JSON.stringify(items));
+      }
+
+      function updateCartCount() {
+        const cartCount = document.getElementById("bmCartCount");
+
+        if (!cartCount) {
+          return;
+        }
+
+        const total = getCartItems().reduce(function (sum, item) {
+          return sum + (item.quantity || 0);
+        }, 0);
+
+        cartCount.textContent = total;
+      }
+
+      function addToCart(product, quantity) {
+        const items = getCartItems();
+        const existingItem = items.find(function (item) {
+          return item.id === product.id;
+        });
+
+        if (existingItem) {
+          existingItem.quantity += quantity;
+        } else {
+          items.push({
+            id: product.id,
+            name: product.name,
+            quantity: quantity,
+          });
+        }
+
+        setCartItems(items);
+        updateCartCount();
+      }
+
+      function renderProduct(product) {
+        document.title = product.name + " | Ban Mê Coffee";
+        document.getElementById("ctspBreadcrumbName").textContent =
+          product.name;
+        document.getElementById("ctspImage").src = product.image;
+        document.getElementById("ctspImage").alt = product.name;
+        document.getElementById("ctspType").textContent = product.type;
+        document.getElementById("ctspName").textContent = product.name;
+        document.getElementById("ctspPrice").textContent = product.price;
+        document.getElementById("ctspSummary").textContent = product.summary;
+        document.getElementById("ctspWeight").textContent = product.weight;
+        document.getElementById("ctspBrew").textContent = product.brew;
+        document.getElementById("ctspTaste").textContent = product.taste;
+        document.getElementById("ctspDesc1").textContent = product.desc1;
+        document.getElementById("ctspDesc2").textContent = product.desc2;
+
+        const highlightList = document.getElementById("ctspHighlights");
+        highlightList.innerHTML = "";
+
+        product.highlights.forEach(function (item) {
+          const li = document.createElement("li");
+          li.textContent = item;
+          highlightList.appendChild(li);
+        });
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id") || "robusta-500g";
+      const currentProduct =
+        productCatalog[productId] || productCatalog["robusta-500g"];
+
+      renderProduct(currentProduct);
+      updateCartCount();
+
+      const qtyInput = document.getElementById("ctspQty");
+      document
+        .getElementById("ctspMinus")
+        .addEventListener("click", function () {
+          const currentValue = Math.max(1, Number(qtyInput.value) || 1);
+          qtyInput.value = Math.max(1, currentValue - 1);
+        });
+
+      document
+        .getElementById("ctspPlus")
+        .addEventListener("click", function () {
+          const currentValue = Math.max(1, Number(qtyInput.value) || 1);
+          qtyInput.value = currentValue + 1;
+        });
+
+      document
+        .getElementById("ctspBuyBtn")
+        .addEventListener("click", function () {
+          const quantity = Math.max(1, Number(qtyInput.value) || 1);
+          addToCart(currentProduct, quantity);
+
+          const button = this;
+          button.classList.add("is-added");
+          button.innerHTML = 'Đã thêm <i class="fa-solid fa-check"></i>';
+
+          setTimeout(function () {
+            button.classList.remove("is-added");
+            button.innerHTML =
+              'Mua ngay <i class="fa-solid fa-cart-shopping"></i>';
+          }, 1200);
+        });
+
+      const bmBackToTop = document.getElementById("bmBackToTop");
+
+      if (bmBackToTop) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 250) {
+            bmBackToTop.classList.add("show");
+          } else {
+            bmBackToTop.classList.remove("show");
+          }
+        });
+
+        bmBackToTop.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      const bmMobileToggle = document.getElementById("bmMobileToggle");
+      const bmHeader = document.querySelector(".bm-header");
+      const bmMenuLinks = document.querySelectorAll(".bm-menu a");
+
+      if (bmMobileToggle && bmHeader) {
+        bmMobileToggle.addEventListener("click", function () {
+          bmHeader.classList.toggle("is-open");
+
+          const icon = bmMobileToggle.querySelector("i");
+
+          if (bmHeader.classList.contains("is-open")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+          } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+        bmMenuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            bmHeader.classList.remove("is-open");
+
+            const icon = bmMobileToggle.querySelector("i");
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          });
+        });
+      }
+    </script>
+    <script src="js/site-search.js"></script>
+  </body>
+</html>

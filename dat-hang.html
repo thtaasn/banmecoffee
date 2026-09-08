@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt hàng | Ban Mê Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dathang.css" />
+  </head>
+
+  <body>
+    <header class="bm-header">
+      <div class="bm-container bm-header-inner">
+        <a href="index.html" class="bm-logo">
+          <img src="image/logo.png" alt="Ban Mê Coffee" />
+        </a>
+
+        <nav class="bm-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="gioi-thieu.html">Giới thiệu</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="ca-phe-ban-me.html">Cà phê Ban Mê</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="bm-header-icons">
+          <a href="#" aria-label="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="gio-hang.html" class="bm-cart-icon" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="bmCartCount">0</span>
+          </a>
+
+          <a href="tai-khoan.html" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+
+        <button
+          class="bm-mobile-toggle"
+          id="bmMobileToggle"
+          aria-label="Mở menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="dh-main">
+        <div class="bm-container">
+          <div class="dh-head">
+            <div>
+              <span class="dh-kicker">Bước thanh toán</span>
+              <h1>Hoàn tất thông tin đặt hàng</h1>
+            </div>
+
+            <a href="gio-hang.html" class="dh-back-link">
+              <i class="fa-solid fa-arrow-left"></i>
+              Quay lại giỏ hàng
+            </a>
+          </div>
+
+          <div class="dh-layout">
+            <section class="dh-form-wrap">
+              <div class="dh-empty" id="dhEmptyState" hidden>
+                <i class="fa-solid fa-cart-flatbed-empty"></i>
+                <h2>Chưa có sản phẩm để đặt hàng</h2>
+                <p>Hãy quay lại danh mục và thêm sản phẩm vào giỏ trước.</p>
+                <a href="san-pham.html" class="dh-primary-btn">Xem sản phẩm</a>
+              </div>
+
+              <form id="dhCheckoutForm" class="dh-form">
+                <div class="dh-card">
+                  <h2>Thông tin khách hàng</h2>
+
+                  <div class="dh-form-grid">
+                    <label>
+                      <span>Họ và tên</span>
+                      <input
+                        type="text"
+                        name="fullName"
+                        placeholder="Nguyễn Văn A"
+                        required
+                      />
+                    </label>
+
+                    <label>
+                      <span>Số điện thoại</span>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="09xx xxx xxx"
+                        required
+                      />
+                    </label>
+
+                    <label>
+                      <span>Email</span>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="ban@example.com"
+                      />
+                    </label>
+
+                    <label>
+                      <span>Tỉnh / Thành phố</span>
+                      <input
+                        type="text"
+                        name="city"
+                        placeholder="Đắk Lắk"
+                        required
+                      />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="dh-card">
+                  <h2>Địa chỉ nhận hàng</h2>
+
+                  <div class="dh-form-grid dh-form-grid-single">
+                    <label>
+                      <span>Địa chỉ chi tiết</span>
+                      <input
+                        type="text"
+                        name="address"
+                        placeholder="Số nhà, đường, phường/xã, quận/huyện"
+                        required
+                      />
+                    </label>
+
+                    <label>
+                      <span>Ghi chú đơn hàng</span>
+                      <textarea
+                        name="note"
+                        rows="4"
+                        placeholder="Ví dụ: giao giờ hành chính, gọi trước khi giao..."
+                      ></textarea>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="dh-card">
+                  <h2>Phương thức thanh toán</h2>
+
+                  <div class="dh-payment-list">
+                    <label class="dh-payment-option">
+                      <input type="radio" name="payment" value="cod" checked />
+                      <span>
+                        <strong>Thanh toán khi nhận hàng</strong>
+                        <small>Phù hợp cho đơn hàng giao tận nơi.</small>
+                      </span>
+                    </label>
+
+                    <label class="dh-payment-option">
+                      <input type="radio" name="payment" value="bank" />
+                      <span>
+                        <strong>Chuyển khoản ngân hàng</strong>
+                        <small
+                          >Thông tin chuyển khoản sẽ được xác nhận sau.</small
+                        >
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </section>
+
+            <aside class="dh-summary" id="dhSummarySection">
+              <h2>Đơn hàng của bạn</h2>
+
+              <div id="dhSummaryList" class="dh-summary-list"></div>
+
+              <div class="dh-summary-row">
+                <span>Số lượng sản phẩm</span>
+                <strong id="dhItemCount">0</strong>
+              </div>
+
+              <div class="dh-summary-row">
+                <span>Tạm tính</span>
+                <strong id="dhSubtotal">0đ</strong>
+              </div>
+
+              <div
+                class="dh-summary-row dh-discount-row"
+                id="dhDiscountRow"
+                hidden
+              >
+                <span> Mã <b id="dhCouponCode"></b> đã áp dụng </span>
+                <strong id="dhDiscount">0đ</strong>
+              </div>
+
+              <div class="dh-summary-row">
+                <span>Phí vận chuyển</span>
+                <strong>Liên hệ</strong>
+              </div>
+              <div class="magiamgia">
+                <span>Mã giảm giá</span>
+
+                <input
+                  type="text"
+                  id="maUuDai"
+                  name="ma_uu_dai"
+                  placeholder="Ví dụ: GIAM10"
+                />
+
+                <button type="button" onclick="apDungUuDai()">Áp dụng</button>
+
+                <p class="danh-sach-ma">
+                  Mã gợi ý:
+                  <button type="button" class="ma-goi-y" data-code="GIAM10">
+                    GIAM10
+                  </button>
+
+                  <button type="button" class="ma-goi-y" data-code="GIAM20">
+                    GIAM20
+                  </button>
+
+                  <button type="button" class="ma-goi-y" data-code="GIAM30">
+                    GIAM30
+                  </button>
+                </p>
+              </div>
+              <div class="dh-summary-total">
+                <span>Tổng cộng</span>
+                <strong id="dhTotal">0đ</strong>
+              </div>
+
+              <button
+                type="submit"
+                form="dhCheckoutForm"
+                class="dh-primary-btn dh-full-btn"
+              >
+                Xác nhận đặt hàng
+              </button>
+
+              <p class="dh-note">
+                Đây là bước thanh toán giao diện tĩnh. Khi cần, mình có thể nối
+                tiếp sang lưu đơn hoặc gửi email xác nhận.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bm-footer">
+      <div class="bm-container bm-footer-grid">
+        <div class="bm-footer-col bm-footer-brand">
+          <a href="index.html" class="bm-footer-logo">
+            <img src="image/logo-footer.png" alt="Ban Mê Coffee" />
+          </a>
+
+          <p>
+            Ban Mê Coffee tự hào mang đến những hạt cà phê chất lượng nhất từ
+            Buôn Ma Thuột - thủ phủ cà phê của Việt Nam.
+          </p>
+
+          <div class="bm-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="#">Câu chuyện thương hiệu</a></li>
+            <li><a href="#">Nông trại của chúng tôi</a></li>
+            <li><a href="#">Chất lượng cà phê</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Thanh toán</a></li>
+            <li><a href="#">Giao hàng & Vận chuyển</a></li>
+            <li><a href="#">Đổi trả & Hoàn tiền</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Thông tin liên hệ</h3>
+
+          <ul class="bm-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:0915638469">0915 638 469</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:banmecoffee@gmail.com">banmecoffee@gmail.com</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="https://banmecoffee.vn">www.banmecoffee.vn</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Đăng ký nhận tin</h3>
+
+          <p>Nhận ngay ưu đãi và thông tin mới nhất từ Ban Mê Coffee.</p>
+
+          <form class="bm-newsletter">
+            <input type="email" placeholder="Nhập email của bạn" />
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bm-copyright">© 2026 Ban Mê Coffee.</div>
+      <div class="bm-student-credit">
+        <p class="bm-student-credit-title">Thiết kế Website</p>
+        <p>Phạm Thị Lan Oanh · Nguyễn Thị Khánh Ly · Cao Quang Hải</p>
+        <p>Lớp: 24DTMDT1A</p>
+        <p>MÔN: Thiết kế Website</p>
+      </div>
+    </footer>
+
+    <button class="bm-back-to-top" id="bmBackToTop" aria-label="Lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      const bmCartStorageKey = "bm-cart-items";
+      const bmLastOrderStorageKey = "bm-last-order";
+
+      const productCatalog = {
+        "robusta-500g": {
+          name: "Cà phê Robusta 500G",
+          price: 145000,
+        },
+        "robusta-250g": {
+          name: "Cà phê Robusta 250G",
+          price: 85000,
+        },
+        "arabica-500g": {
+          name: "Cà phê Arabica 500G",
+          price: 165000,
+        },
+        "rang-xay-500g": {
+          name: "Cà phê Rang Xay 500G",
+          price: 150000,
+        },
+        "phin-blend-500g": {
+          name: "Cà phê Phin Blend 500G",
+          price: 155000,
+        },
+        "espresso-blend-500g": {
+          name: "Cà phê Espresso Blend 500G",
+          price: 175000,
+        },
+        "moka-250g": {
+          name: "Cà phê Moka 250G",
+          price: 120000,
+        },
+        "cold-brew-blend-500g": {
+          name: "Cold Brew Blend 500G",
+          price: 168000,
+        },
+        "hat-moc-1kg": {
+          name: "Cà phê Hạt Mộc 1KG",
+          price: 279000,
+        },
+        "tui-loc-10-goi": {
+          name: "Cà phê Túi Lọc 10 Gói",
+          price: 98000,
+        },
+      };
+
+      /*
+       * Thông tin mã giảm giá đang được áp dụng.
+       */
+      let soTienGiam = 0;
+      let maUuDaiDaApDung = "";
+
+      /*
+       * Lấy danh sách sản phẩm trong giỏ hàng.
+       */
+      function getCartItems() {
+        try {
+          const raw = localStorage.getItem(bmCartStorageKey);
+          const parsed = raw ? JSON.parse(raw) : [];
+
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+          console.error("Không thể đọc giỏ hàng:", error);
+          return [];
+        }
+      }
+
+      /*
+       * Định dạng tiền Việt Nam.
+       */
+      function formatCurrency(number) {
+        const amount = Number(number) || 0;
+
+        return amount.toLocaleString("vi-VN") + "đ";
+      }
+
+      /*
+       * Tính tổng số lượng sản phẩm.
+       */
+      function getTotalQuantity(items) {
+        return items.reduce(function (sum, item) {
+          const quantity = Number(item.quantity) || 0;
+
+          return sum + quantity;
+        }, 0);
+      }
+
+      /*
+       * Tính tổng tiền hàng trước giảm giá.
+       */
+      function getSubtotalAmount(items) {
+        return items.reduce(function (sum, item) {
+          const product = productCatalog[item.id];
+          const quantity = Number(item.quantity) || 0;
+
+          if (!product || quantity <= 0) {
+            return sum;
+          }
+
+          return sum + product.price * quantity;
+        }, 0);
+      }
+
+      /*
+       * Cập nhật số lượng trên biểu tượng giỏ hàng.
+       */
+      function updateCartCount() {
+        const cartCount = document.getElementById("bmCartCount");
+
+        if (!cartCount) {
+          return;
+        }
+
+        const items = getCartItems();
+        const totalQuantity = getTotalQuantity(items);
+
+        cartCount.textContent = String(totalQuantity);
+      }
+
+      /*
+       * Hiển thị thông tin đơn hàng.
+       */
+      function renderCheckoutSummary() {
+        const items = getCartItems();
+
+        const emptyState = document.getElementById("dhEmptyState");
+        const form = document.getElementById("dhCheckoutForm");
+        const summary = document.getElementById("dhSummarySection");
+        const summaryList = document.getElementById("dhSummaryList");
+        const itemCount = document.getElementById("dhItemCount");
+        const subtotal = document.getElementById("dhSubtotal");
+        const discountRow = document.getElementById("dhDiscountRow");
+        const couponCode = document.getElementById("dhCouponCode");
+        const discount = document.getElementById("dhDiscount");
+        const total = document.getElementById("dhTotal");
+
+        updateCartCount();
+
+        if (!items.length) {
+          if (emptyState) {
+            emptyState.hidden = false;
+          }
+
+          if (form) {
+            form.hidden = true;
+          }
+
+          if (summary) {
+            summary.hidden = true;
+          }
+
+          return;
+        }
+
+        if (emptyState) {
+          emptyState.hidden = true;
+        }
+
+        if (form) {
+          form.hidden = false;
+        }
+
+        if (summary) {
+          summary.hidden = false;
+        }
+
+        if (summaryList) {
+          summaryList.innerHTML = "";
+        }
+
+        let totalQuantity = 0;
+        let subtotalAmount = 0;
+
+        items.forEach(function (item) {
+          const product = productCatalog[item.id];
+          const quantity = Number(item.quantity) || 0;
+
+          if (!product || quantity <= 0) {
+            return;
+          }
+
+          const lineTotal = product.price * quantity;
+
+          totalQuantity += quantity;
+          subtotalAmount += lineTotal;
+
+          if (!summaryList) {
+            return;
+          }
+
+          const row = document.createElement("div");
+          row.className = "dh-summary-item";
+
+          const productInfo = document.createElement("div");
+
+          const productName = document.createElement("h3");
+          productName.textContent = product.name;
+
+          const productQuantity = document.createElement("p");
+          productQuantity.textContent = "Số lượng: " + quantity;
+
+          const productPrice = document.createElement("strong");
+          productPrice.textContent = formatCurrency(lineTotal);
+
+          productInfo.appendChild(productName);
+          productInfo.appendChild(productQuantity);
+
+          row.appendChild(productInfo);
+          row.appendChild(productPrice);
+
+          summaryList.appendChild(row);
+        });
+
+        /*
+         * Không cho số tiền giảm lớn hơn tổng tiền hàng.
+         */
+        const discountAmount = Math.min(soTienGiam, subtotalAmount);
+
+        /*
+         * Không cho tổng thanh toán nhỏ hơn 0.
+         */
+        const finalAmount = Math.max(0, subtotalAmount - discountAmount);
+
+        if (itemCount) {
+          itemCount.textContent = String(totalQuantity);
+        }
+
+        if (subtotal) {
+          subtotal.textContent = formatCurrency(subtotalAmount);
+        }
+
+        if (discount) {
+          discount.textContent =
+            discountAmount > 0
+              ? "-" + formatCurrency(discountAmount)
+              : formatCurrency(0);
+        }
+
+        if (discountRow) {
+          discountRow.hidden = discountAmount <= 0 || !maUuDaiDaApDung;
+        }
+
+        if (couponCode) {
+          couponCode.textContent = maUuDaiDaApDung;
+        }
+
+        if (total) {
+          total.textContent = formatCurrency(finalAmount);
+        }
+      }
+
+      /*
+       * Áp dụng mã ưu đãi.
+       */
+      function apDungUuDai() {
+        const oMaUuDai = document.getElementById("maUuDai");
+
+        if (!oMaUuDai) {
+          return;
+        }
+
+        const ma = oMaUuDai.value.trim().toUpperCase();
+
+        /*
+         * Chuẩn hóa mã hiển thị trong input.
+         */
+        oMaUuDai.value = ma;
+
+        if (ma === "") {
+          soTienGiam = 0;
+          maUuDaiDaApDung = "";
+
+          renderCheckoutSummary();
+
+          alert("Vui lòng nhập mã ưu đãi.");
+          return;
+        }
+
+        if (ma === "GIAM10") {
+          soTienGiam = 10000;
+          maUuDaiDaApDung = ma;
+        } else if (ma === "GIAM20") {
+          soTienGiam = 20000;
+          maUuDaiDaApDung = ma;
+        } else if (ma === "GIAM30") {
+          soTienGiam = 30000;
+          maUuDaiDaApDung = ma;
+        } else {
+          soTienGiam = 0;
+          maUuDaiDaApDung = "";
+
+          renderCheckoutSummary();
+
+          alert("Mã ưu đãi không hợp lệ.");
+          return;
+        }
+
+        /*
+         * Cập nhật lại tổng thanh toán ngay sau khi áp dụng.
+         */
+        renderCheckoutSummary();
+
+        alert(
+          "Áp dụng mã " +
+            maUuDaiDaApDung +
+            " thành công. Bạn được giảm " +
+            formatCurrency(soTienGiam) +
+            ".",
+        );
+      }
+
+      /*
+       * Khởi tạo chức năng mã ưu đãi.
+       */
+      function initCouponButtons() {
+        const oMaUuDai = document.getElementById("maUuDai");
+        const couponButtons = document.querySelectorAll(".ma-goi-y");
+
+        couponButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            if (!oMaUuDai) {
+              return;
+            }
+
+            const code = button.dataset.code || "";
+
+            oMaUuDai.value = code;
+            apDungUuDai();
+          });
+        });
+
+        /*
+         * Nhấn Enter trong ô mã giảm giá để áp dụng.
+         */
+        if (oMaUuDai) {
+          oMaUuDai.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              apDungUuDai();
+            }
+          });
+
+          /*
+           * Khi người dùng sửa mã sau khi đã áp dụng,
+           * hủy mã cũ để tránh tính sai.
+           */
+          oMaUuDai.addEventListener("input", function () {
+            const currentCode = oMaUuDai.value.trim().toUpperCase();
+
+            if (maUuDaiDaApDung && currentCode !== maUuDaiDaApDung) {
+              soTienGiam = 0;
+              maUuDaiDaApDung = "";
+
+              renderCheckoutSummary();
+            }
+          });
+        }
+      }
+
+      /*
+       * Xử lý đặt hàng.
+       */
+      function initCheckoutForm() {
+        const checkoutForm = document.getElementById("dhCheckoutForm");
+
+        if (!checkoutForm) {
+          return;
+        }
+
+        checkoutForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const items = getCartItems();
+
+          if (!items.length) {
+            alert("Giỏ hàng của bạn đang trống.");
+            renderCheckoutSummary();
+            return;
+          }
+
+          const formData = new FormData(event.currentTarget);
+          const itemCount = getTotalQuantity(items);
+          const subtotalAmount = getSubtotalAmount(items);
+
+          /*
+           * Chỉ trừ tối đa bằng tổng tiền hàng.
+           */
+          const discountAmount = Math.min(soTienGiam, subtotalAmount);
+
+          const totalAmount = Math.max(0, subtotalAmount - discountAmount);
+
+          const orderCode = "#BMC" + String(Date.now()).slice(-6);
+
+          const orderData = {
+            code: orderCode,
+            fullName: formData.get("fullName"),
+            phone: formData.get("phone"),
+            itemCount: itemCount,
+            items: items,
+
+            subtotal: subtotalAmount,
+            couponCode: maUuDaiDaApDung,
+            discount: discountAmount,
+            total: totalAmount,
+
+            createdAt: new Date().toISOString(),
+          };
+
+          localStorage.setItem(
+            bmLastOrderStorageKey,
+            JSON.stringify(orderData),
+          );
+
+          /*
+           * Xóa giỏ hàng sau khi đặt thành công.
+           */
+          localStorage.setItem(bmCartStorageKey, JSON.stringify([]));
+
+          window.location.href = "dat-hang-thanh-cong.html";
+        });
+      }
+
+      /*
+       * Nút quay lại đầu trang.
+       */
+      function initBackToTop() {
+        const bmBackToTop = document.getElementById("bmBackToTop");
+
+        if (!bmBackToTop) {
+          return;
+        }
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 250) {
+            bmBackToTop.classList.add("show");
+          } else {
+            bmBackToTop.classList.remove("show");
+          }
+        });
+
+        bmBackToTop.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      /*
+       * Menu trên thiết bị di động.
+       */
+      function initMobileMenu() {
+        const bmMobileToggle = document.getElementById("bmMobileToggle");
+
+        const bmHeader = document.querySelector(".bm-header");
+
+        const bmMenuLinks = document.querySelectorAll(".bm-menu a");
+
+        if (!bmMobileToggle || !bmHeader) {
+          return;
+        }
+
+        bmMobileToggle.addEventListener("click", function () {
+          bmHeader.classList.toggle("is-open");
+
+          const icon = bmMobileToggle.querySelector("i");
+
+          if (!icon) {
+            return;
+          }
+
+          if (bmHeader.classList.contains("is-open")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+          } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+        bmMenuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            bmHeader.classList.remove("is-open");
+
+            const icon = bmMobileToggle.querySelector("i");
+
+            if (!icon) {
+              return;
+            }
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          });
+        });
+      }
+
+      /*
+       * Khởi chạy khi trang đã tải xong.
+       */
+      document.addEventListener("DOMContentLoaded", function () {
+        renderCheckoutSummary();
+        initCouponButtons();
+        initCheckoutForm();
+        initBackToTop();
+        initMobileMenu();
+      });
+    </script>
+    <script src="js/site-search.js"></script>
+  </body>
+</html>

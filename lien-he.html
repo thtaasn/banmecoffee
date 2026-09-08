@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ | Ban Mê Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/lienhe.css" />
+  </head>
+
+  <body>
+    <header class="bm-header">
+      <div class="bm-container bm-header-inner">
+        <a href="index.html" class="bm-logo">
+          <img src="image/logo.png" alt="Ban Mê Coffee" />
+        </a>
+
+        <nav class="bm-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="gioi-thieu.html">Giới thiệu</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="ca-phe-ban-me.html">Cà phê Ban Mê</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html" class="active">Liên hệ</a>
+        </nav>
+
+        <div class="bm-header-icons">
+          <a href="#" aria-label="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="gio-hang.html" class="bm-cart-icon" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="bmCartCount">0</span>
+          </a>
+
+          <a href="tai-khoan.html" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+
+        <button
+          class="bm-mobile-toggle"
+          id="bmMobileToggle"
+          aria-label="Mở menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="lh-hero">
+        <div class="bm-container lh-hero-inner">
+          <span class="lh-kicker">Liên hệ Ban Mê Coffee</span>
+          <h1>Kết nối với chúng tôi để được hỗ trợ nhanh hơn</h1>
+          <p>
+            Nếu bạn cần tư vấn chọn sản phẩm, hỏi về đơn hàng hoặc muốn hợp tác,
+            hãy để lại thông tin. Ban Mê Coffee sẽ phản hồi sớm nhất có thể.
+          </p>
+        </div>
+      </section>
+
+      <section class="lh-main">
+        <div class="bm-container lh-layout">
+          <div class="lh-info">
+            <span class="lh-section-tag">Thông tin liên hệ</span>
+            <h2>Luôn sẵn sàng lắng nghe và hỗ trợ</h2>
+            <p>
+              Chúng tôi ưu tiên trải nghiệm liên hệ rõ ràng, dễ tiếp cận và phản
+              hồi gọn. Bạn có thể gọi trực tiếp, gửi email hoặc điền form bên
+              cạnh để đội ngũ Ban Mê Coffee tiếp nhận.
+            </p>
+
+            <div class="lh-info-list">
+              <article class="lh-info-card">
+                <div class="lh-info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h3>Địa chỉ</h3>
+                  <p>123 Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk</p>
+                </div>
+              </article>
+
+              <article class="lh-info-card">
+                <div class="lh-info-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h3>Điện thoại</h3>
+                  <p><a href="tel:0915638469">0915 638 469</a></p>
+                </div>
+              </article>
+
+              <article class="lh-info-card">
+                <div class="lh-info-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h3>Email</h3>
+                  <p>
+                    <a href="mailto:banmecoffee@gmail.com"
+                      >banmecoffee@gmail.com</a
+                    >
+                  </p>
+                </div>
+              </article>
+
+              <article class="lh-info-card">
+                <div class="lh-info-icon">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <h3>Thời gian hỗ trợ</h3>
+                  <p>08:00 - 17:30 từ Thứ Hai đến Thứ Bảy</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="lh-form-wrap">
+            <form class="lh-form" id="lhContactForm">
+              <div class="lh-form-head">
+                <span class="lh-section-tag">Gửi tin nhắn</span>
+                <h2>Để lại nội dung bạn cần hỗ trợ</h2>
+              </div>
+
+              <div class="lh-form-grid">
+                <label>
+                  <span>Họ và tên</span>
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="Nguyễn Văn A"
+                    required
+                  />
+                </label>
+
+                <label>
+                  <span>Số điện thoại</span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="09xx xxx xxx"
+                    required
+                  />
+                </label>
+
+                <label>
+                  <span>Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="ban@example.com"
+                  />
+                </label>
+
+                <label>
+                  <span>Chủ đề</span>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Ví dụ: tư vấn sản phẩm"
+                    required
+                  />
+                </label>
+
+                <label class="lh-form-full">
+                  <span>Nội dung</span>
+                  <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Bạn cần Ban Mê Coffee hỗ trợ điều gì?"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+
+              <button type="submit" class="lh-submit-btn">
+                Gửi liên hệ
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+
+            <div class="lh-map-card">
+              <h3>Khu vực phục vụ</h3>
+              <p>
+                Ban Mê Coffee hỗ trợ giao hàng toàn quốc và tư vấn trực tuyến
+                cho khách ở nhiều khu vực.
+              </p>
+
+              <div class="lh-map-box">
+                <div class="lh-map-pin">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <span>Buôn Ma Thuột, Đắk Lắk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bm-footer">
+      <div class="bm-container bm-footer-grid">
+        <div class="bm-footer-col bm-footer-brand">
+          <a href="index.html" class="bm-footer-logo">
+            <img src="image/logo-footer.png" alt="Ban Mê Coffee" />
+          </a>
+
+          <p>
+            Ban Mê Coffee tự hào mang đến những hạt cà phê chất lượng nhất từ
+            Buôn Ma Thuột - thủ phủ cà phê của Việt Nam.
+          </p>
+
+          <div class="bm-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="#">Câu chuyện thương hiệu</a></li>
+            <li><a href="#">Nông trại của chúng tôi</a></li>
+            <li><a href="#">Chất lượng cà phê</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Thanh toán</a></li>
+            <li><a href="#">Giao hàng & Vận chuyển</a></li>
+            <li><a href="#">Đổi trả & Hoàn tiền</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Thông tin liên hệ</h3>
+
+          <ul class="bm-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:0915638469">0915 638 469</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:banmecoffee@gmail.com">banmecoffee@gmail.com</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="https://banmecoffee.vn">www.banmecoffee.vn</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Đăng ký nhận tin</h3>
+
+          <p>Nhận ngay ưu đãi và thông tin mới nhất từ Ban Mê Coffee.</p>
+
+          <form class="bm-newsletter">
+            <input type="email" placeholder="Nhập email của bạn" />
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bm-copyright">© 2026 Ban Mê Coffee.</div>
+      <div class="bm-student-credit">
+        <p class="bm-student-credit-title">Thiết kế Website</p>
+        <p>Phạm Thị Lan Oanh · Nguyễn Thị Khánh Ly · Cao Quang Hải</p>
+        <p>Lớp: 24DTMDT1A</p>
+        <p>MÔN: Thiết kế Website</p>
+      </div>
+    </footer>
+
+    <button class="bm-back-to-top" id="bmBackToTop" aria-label="Lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      const bmCartStorageKey = "bm-cart-items";
+
+      function getCartItems() {
+        try {
+          const raw = localStorage.getItem(bmCartStorageKey);
+          const parsed = raw ? JSON.parse(raw) : [];
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function updateCartCount() {
+        const cartCount = document.getElementById("bmCartCount");
+
+        if (!cartCount) {
+          return;
+        }
+
+        const total = getCartItems().reduce(function (sum, item) {
+          return sum + (item.quantity || 0);
+        }, 0);
+
+        cartCount.textContent = total;
+      }
+
+      updateCartCount();
+
+      document
+        .getElementById("lhContactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert(
+            "Ban Mê Coffee đã nhận được liên hệ của bạn và sẽ phản hồi sớm.",
+          );
+          event.currentTarget.reset();
+        });
+
+      const bmBackToTop = document.getElementById("bmBackToTop");
+
+      if (bmBackToTop) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 250) {
+            bmBackToTop.classList.add("show");
+          } else {
+            bmBackToTop.classList.remove("show");
+          }
+        });
+
+        bmBackToTop.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      const bmMobileToggle = document.getElementById("bmMobileToggle");
+      const bmHeader = document.querySelector(".bm-header");
+      const bmMenuLinks = document.querySelectorAll(".bm-menu a");
+
+      if (bmMobileToggle && bmHeader) {
+        bmMobileToggle.addEventListener("click", function () {
+          bmHeader.classList.toggle("is-open");
+
+          const icon = bmMobileToggle.querySelector("i");
+
+          if (bmHeader.classList.contains("is-open")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+          } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+        bmMenuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            bmHeader.classList.remove("is-open");
+
+            const icon = bmMobileToggle.querySelector("i");
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          });
+        });
+      }
+    </script>
+    <script src="js/site-search.js"></script>
+  </body>
+</html>

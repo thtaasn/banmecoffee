@@ -1,0 +1,255 @@
+body {
+  background:
+    radial-gradient(circle at top left, rgba(217, 161, 93, 0.18), transparent 28%),
+    #f5ead8;
+}
+
+.lh-hero {
+  padding: 150px 0 72px;
+  background:
+    linear-gradient(rgba(20, 12, 6, 0.72), rgba(20, 12, 6, 0.58)),
+    url("../image/nen1.jpg") center / cover no-repeat;
+  color: #f6e7d2;
+}
+
+.lh-hero-inner {
+  max-width: 760px;
+}
+
+.lh-kicker,
+.lh-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #e8bf87;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lh-kicker::before,
+.lh-section-tag::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: currentColor;
+}
+
+.lh-hero h1 {
+  margin: 16px 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.lh-hero p {
+  margin: 0;
+  color: rgba(246, 231, 210, 0.88);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.lh-main {
+  padding: 54px 0 78px;
+}
+
+.lh-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.lh-info h2,
+.lh-form-head h2 {
+  margin: 14px 0 16px;
+  color: #2f1d12;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.lh-info p,
+.lh-map-card p {
+  color: #5a4231;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.lh-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.lh-info-card,
+.lh-form,
+.lh-map-card {
+  background: #f0dec4;
+  border: 1px solid rgba(91, 59, 37, 0.08);
+  box-shadow: 0 16px 34px rgba(60, 35, 18, 0.08);
+}
+
+.lh-info-card {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  padding: 20px;
+}
+
+.lh-info-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #3c2618;
+  color: #d6a05f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.lh-info-card h3,
+.lh-map-card h3 {
+  margin: 0 0 8px;
+  color: #2f1d12;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.lh-info-card p {
+  margin: 0;
+}
+
+.lh-form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lh-form {
+  padding: 28px 26px;
+}
+
+.lh-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.lh-form-full {
+  grid-column: 1 / -1;
+}
+
+.lh-form label span {
+  display: block;
+  margin-bottom: 8px;
+  color: #5a4231;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.lh-form input,
+.lh-form textarea {
+  width: 100%;
+  border: 1px solid rgba(91, 59, 37, 0.18);
+  background: #fbf5eb;
+  color: #2f1d12;
+  padding: 13px 14px;
+  font: inherit;
+  outline: 0;
+}
+
+.lh-form textarea {
+  resize: vertical;
+}
+
+.lh-submit-btn {
+  margin-top: 20px;
+  min-width: 180px;
+  height: 46px;
+  border: 1px solid #6a4a32;
+  background: #3c2618;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.lh-map-card {
+  padding: 24px 26px;
+}
+
+.lh-map-box {
+  min-height: 180px;
+  margin-top: 18px;
+  background:
+    linear-gradient(rgba(34, 20, 11, 0.22), rgba(34, 20, 11, 0.22)),
+    url("../image/nen.png") center / cover no-repeat;
+  color: #fff4e7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lh-map-pin {
+  font-size: 34px;
+  color: #f0bc75;
+}
+
+.lh-map-box span {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .lh-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lh-info h2,
+  .lh-form-head h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lh-hero {
+    padding: 126px 0 58px;
+  }
+
+  .lh-hero h1 {
+    font-size: 32px;
+  }
+
+  .lh-main {
+    padding: 42px 0 54px;
+  }
+
+  .lh-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lh-info-card {
+    grid-template-columns: 1fr;
+  }
+}

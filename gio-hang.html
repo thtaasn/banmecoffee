@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng | Ban Mê Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/giohang.css" />
+  </head>
+
+  <body>
+    <header class="bm-header">
+      <div class="bm-container bm-header-inner">
+        <a href="index.html" class="bm-logo">
+          <img src="image/logo.png" alt="Ban Mê Coffee" />
+        </a>
+
+        <nav class="bm-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="gioi-thieu.html">Giới thiệu</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="ca-phe-ban-me.html">Cà phê Ban Mê</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="bm-header-icons">
+          <a href="#" aria-label="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="gio-hang.html" class="bm-cart-icon" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="bmCartCount">0</span>
+          </a>
+
+          <a href="tai-khoan.html" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+
+        <button
+          class="bm-mobile-toggle"
+          id="bmMobileToggle"
+          aria-label="Mở menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="gh-main">
+        <div class="bm-container">
+          <div class="gh-head">
+            <div>
+              <span class="gh-kicker">Giỏ hàng của bạn</span>
+              <h1>Kiểm tra sản phẩm trước khi đặt mua</h1>
+            </div>
+
+            <a href="san-pham.html" class="gh-back-link">
+              <i class="fa-solid fa-arrow-left"></i>
+              Tiếp tục mua hàng
+            </a>
+          </div>
+
+          <div class="gh-layout">
+            <section class="gh-list-wrap">
+              <div id="ghEmptyState" class="gh-empty" hidden>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <h2>Giỏ hàng đang trống</h2>
+                <p>Hãy thêm vài sản phẩm để bắt đầu đơn hàng của bạn.</p>
+                <a href="san-pham.html" class="gh-primary-btn">Xem sản phẩm</a>
+              </div>
+              <!-- NÚT XÓA TOÀN BỘ SẢN PHẨM -->
+              <div id="ghCartSection">
+                <div class="gh-list-head">
+                  <span>Sản phẩm</span>
+                  <button type="button" class="gh-clear-btn" id="ghClearCart">
+                    <!--  KHÔNG CÓ  THÌ XÓA  ĐI TOÀN BỘ -->
+                    XÓA TOÀN BỘ
+                  </button>
+                </div>
+
+                <div id="ghCartList" class="gh-list"></div>
+              </div>
+            </section>
+
+            <aside class="gh-summary">
+              <h2>Tóm tắt đơn hàng</h2>
+
+              <div class="gh-summary-row">
+                <span>Số lượng sản phẩm</span>
+                <strong id="ghItemCount">0</strong>
+              </div>
+
+              <div class="gh-summary-row">
+                <span>Tạm tính</span>
+                <strong id="ghSubtotal">0đ</strong>
+              </div>
+
+              <div class="gh-summary-row">
+                <span>Phí vận chuyển</span>
+                <strong>Liên hệ</strong>
+              </div>
+
+              <div class="gh-summary-total">
+                <span>Tổng cộng</span>
+                <strong id="ghTotal">0đ</strong>
+              </div>
+
+              <a href="dat-hang.html" class="gh-primary-btn gh-full-btn">
+                Tiến hành đặt hàng
+              </a>
+
+              <p class="gh-note">
+                Trang này đang là giao diện tĩnh cho giỏ hàng. Khi bạn muốn,
+                mình có thể code tiếp bước thanh toán.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bm-footer">
+      <div class="bm-container bm-footer-grid">
+        <div class="bm-footer-col bm-footer-brand">
+          <a href="index.html" class="bm-footer-logo">
+            <img src="image/logo-footer.png" alt="Ban Mê Coffee" />
+          </a>
+
+          <p>
+            Ban Mê Coffee tự hào mang đến những hạt cà phê chất lượng nhất từ
+            Buôn Ma Thuột - thủ phủ cà phê của Việt Nam.
+          </p>
+
+          <div class="bm-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="#">Câu chuyện thương hiệu</a></li>
+            <li><a href="#">Nông trại của chúng tôi</a></li>
+            <li><a href="#">Chất lượng cà phê</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Thanh toán</a></li>
+            <li><a href="#">Giao hàng & Vận chuyển</a></li>
+            <li><a href="#">Đổi trả & Hoàn tiền</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Thông tin liên hệ</h3>
+
+          <ul class="bm-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:0915638469">0915 638 469</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:banmecoffee@gmail.com">banmecoffee@gmail.com</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="https://banmecoffee.vn">www.banmecoffee.vn</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bm-footer-col">
+          <h3>Đăng ký nhận tin</h3>
+
+          <p>Nhận ngay ưu đãi và thông tin mới nhất từ Ban Mê Coffee.</p>
+
+          <form class="bm-newsletter">
+            <input type="email" placeholder="Nhập email của bạn" />
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bm-copyright">© 2026 Ban Mê Coffee.</div>
+      <div class="bm-student-credit">
+        <p class="bm-student-credit-title">Thiết kế Website</p>
+        <p>Phạm Thị Lan Oanh · Nguyễn Thị Khánh Ly · Cao Quang Hải</p>
+        <p>Lớp: 24DTMDT1A</p>
+        <p>MÔN: Thiết kế Website</p>
+      </div>
+    </footer>
+
+    <button class="bm-back-to-top" id="bmBackToTop" aria-label="Lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      const bmCartStorageKey = "bm-cart-items";
+      const productCatalog = {
+        "robusta-500g": {
+          id: "robusta-500g",
+          name: "Cà phê Robusta 500G",
+          price: 145000,
+          image: "image/sanpham1.png",
+        },
+        "robusta-250g": {
+          id: "robusta-250g",
+          name: "Cà phê Robusta 250G",
+          price: 85000,
+          image: "image/sanpham2.png",
+        },
+        "arabica-500g": {
+          id: "arabica-500g",
+          name: "Cà phê Arabica 500G",
+          price: 165000,
+          image: "image/sanpham3.png",
+        },
+        "rang-xay-500g": {
+          id: "rang-xay-500g",
+          name: "Cà phê Rang Xay 500G",
+          price: 150000,
+          image: "image/sanpham4.png",
+        },
+        "phin-blend-500g": {
+          id: "phin-blend-500g",
+          name: "Cà phê Phin Blend 500G",
+          price: 155000,
+          image: "image/sanpham1.png",
+        },
+        "espresso-blend-500g": {
+          id: "espresso-blend-500g",
+          name: "Cà phê Espresso Blend 500G",
+          price: 175000,
+          image: "image/sanpham2.png",
+        },
+        "moka-250g": {
+          id: "moka-250g",
+          name: "Cà phê Moka 250G",
+          price: 120000,
+          image: "image/sanpham3.png",
+        },
+        "cold-brew-blend-500g": {
+          id: "cold-brew-blend-500g",
+          name: "Cold Brew Blend 500G",
+          price: 168000,
+          image: "image/sanpham4.png",
+        },
+        "hat-moc-1kg": {
+          id: "hat-moc-1kg",
+          name: "Cà phê Hạt Mộc 1KG",
+          price: 279000,
+          image: "image/sanpham1.png",
+        },
+        "tui-loc-10-goi": {
+          id: "tui-loc-10-goi",
+          name: "Cà phê Túi Lọc 10 Gói",
+          price: 98000,
+          image: "image/sanpham2.png",
+        },
+      };
+
+      function getCartItems() {
+        try {
+          const raw = localStorage.getItem(bmCartStorageKey);
+          const parsed = raw ? JSON.parse(raw) : [];
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function setCartItems(items) {
+        localStorage.setItem(bmCartStorageKey, JSON.stringify(items));
+      }
+
+      function formatCurrency(number) {
+        return Number(number).toLocaleString("vi-VN") + "đ";
+      }
+
+      function updateCartCount() {
+        const cartCount = document.getElementById("bmCartCount");
+
+        if (!cartCount) {
+          return;
+        }
+
+        const total = getCartItems().reduce(function (sum, item) {
+          return sum + (item.quantity || 0);
+        }, 0);
+
+        cartCount.textContent = total;
+      }
+
+      function updateItemQuantity(productId, nextQuantity) {
+        const items = getCartItems()
+          .map(function (item) {
+            if (item.id === productId) {
+              return {
+                id: item.id,
+                name: item.name,
+                quantity: nextQuantity,
+              };
+            }
+
+            return item;
+          })
+          .filter(function (item) {
+            return item.quantity > 0;
+          });
+
+        setCartItems(items);
+        renderCart();
+      }
+
+      function removeCartItem(productId) {
+        const items = getCartItems().filter(function (item) {
+          return item.id !== productId;
+        });
+
+        setCartItems(items);
+        renderCart();
+      }
+
+      function clearCart() {
+        setCartItems([]);
+        renderCart();
+      }
+
+      function renderCart() {
+        const items = getCartItems();
+        const cartList = document.getElementById("ghCartList");
+        const emptyState = document.getElementById("ghEmptyState");
+        const cartSection = document.getElementById("ghCartSection");
+        const itemCount = document.getElementById("ghItemCount");
+        const subtotal = document.getElementById("ghSubtotal");
+        const total = document.getElementById("ghTotal");
+
+        updateCartCount();
+        cartList.innerHTML = "";
+
+        if (!items.length) {
+          emptyState.hidden = false;
+          cartSection.hidden = true;
+          itemCount.textContent = "0";
+          subtotal.textContent = "0đ";
+          total.textContent = "0đ";
+          return;
+        }
+
+        emptyState.hidden = true;
+        cartSection.hidden = false;
+
+        let totalQuantity = 0;
+        let totalAmount = 0;
+
+        items.forEach(function (item) {
+          const product = productCatalog[item.id];
+
+          if (!product) {
+            return;
+          }
+
+          totalQuantity += item.quantity;
+          totalAmount += product.price * item.quantity;
+
+          const row = document.createElement("article");
+          row.className = "gh-item";
+          row.innerHTML =
+            '<a class="gh-item-image" href="chi-tiet-san-pham.html?id=' +
+            product.id +
+            '">' +
+            '<img src="' +
+            product.image +
+            '" alt="' +
+            product.name +
+            '" />' +
+            "</a>" +
+            '<div class="gh-item-content">' +
+            '<div class="gh-item-top">' +
+            '<div><h3><a href="chi-tiet-san-pham.html?id=' +
+            product.id +
+            '">' +
+            product.name +
+            "</a></h3>" +
+            '<p class="gh-item-price">' +
+            formatCurrency(product.price) +
+            "</p></div>" +
+            '<button type="button" class="gh-remove-btn" data-remove-id="' +
+            product.id +
+            '"><i class="fa-regular fa-trash-can"></i></button>' +
+            "</div>" +
+            '<div class="gh-item-bottom">' +
+            '<div class="gh-quantity">' +
+            '<button type="button" data-action="minus" data-id="' +
+            product.id +
+            '">-</button>' +
+            "<span>" +
+            item.quantity +
+            "</span>" +
+            '<button type="button" data-action="plus" data-id="' +
+            product.id +
+            '">+</button>' +
+            "</div>" +
+            '<strong class="gh-line-total">' +
+            formatCurrency(product.price * item.quantity) +
+            "</strong>" +
+            "</div>" +
+            "</div>";
+
+          cartList.appendChild(row);
+        });
+
+        itemCount.textContent = String(totalQuantity);
+        subtotal.textContent = formatCurrency(totalAmount);
+        total.textContent = formatCurrency(totalAmount);
+      }
+
+      document.addEventListener("click", function (event) {
+        const actionButton = event.target.closest("[data-action]");
+        const removeButton = event.target.closest("[data-remove-id]");
+
+        if (actionButton) {
+          const productId = actionButton.dataset.id;
+          const action = actionButton.dataset.action;
+          const currentItem = getCartItems().find(function (item) {
+            return item.id === productId;
+          });
+
+          if (!currentItem) {
+            return;
+          }
+
+          const nextQuantity =
+            action === "plus"
+              ? currentItem.quantity + 1
+              : currentItem.quantity - 1;
+          updateItemQuantity(productId, nextQuantity);
+        }
+
+        if (removeButton) {
+          removeCartItem(removeButton.dataset.removeId);
+        }
+      });
+
+      document
+        .getElementById("ghClearCart")
+        .addEventListener("click", clearCart);
+
+      renderCart();
+
+      const bmBackToTop = document.getElementById("bmBackToTop");
+
+      if (bmBackToTop) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 250) {
+            bmBackToTop.classList.add("show");
+          } else {
+            bmBackToTop.classList.remove("show");
+          }
+        });
+
+        bmBackToTop.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      const bmMobileToggle = document.getElementById("bmMobileToggle");
+      const bmHeader = document.querySelector(".bm-header");
+      const bmMenuLinks = document.querySelectorAll(".bm-menu a");
+
+      if (bmMobileToggle && bmHeader) {
+        bmMobileToggle.addEventListener("click", function () {
+          bmHeader.classList.toggle("is-open");
+
+          const icon = bmMobileToggle.querySelector("i");
+
+          if (bmHeader.classList.contains("is-open")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+          } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+        bmMenuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            bmHeader.classList.remove("is-open");
+
+            const icon = bmMobileToggle.querySelector("i");
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          });
+        });
+      }
+    </script>
+    <script src="js/site-search.js"></script>
+  </body>
+</html>
